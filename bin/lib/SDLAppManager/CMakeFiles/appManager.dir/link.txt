@@ -1,0 +1,2 @@
+/usr/bin/ar qc libappManager.a CMakeFiles/appManager.dir/sdl_app_manager.cpp.o
+/usr/bin/ranlib libappManager.a

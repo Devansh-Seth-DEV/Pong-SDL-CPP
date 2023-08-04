@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtextured_rect.a CMakeFiles/textured_rect.dir/TEX_rect.cpp.o
+/usr/bin/ranlib libtextured_rect.a
