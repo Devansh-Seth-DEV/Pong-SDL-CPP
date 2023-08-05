@@ -32,12 +32,12 @@ void Entity::ColliderUpdate() const {
 }
 
 void Entity::ColliderUpdate(const int index) const {
-	m_colliders[i]->Update();
+	m_colliders[index]->Update();
 }
 
 void Entity::Render() {
 	if(m_sprite != nullptr) {
-		m_sprite->Render(m_renderer, nullptr);
+		m_sprite->Render(m_renderer);
 	}
 
 	for(int i=0; i<m_colliders.size(); i++) {
@@ -45,9 +45,9 @@ void Entity::Render() {
 	}
 }
 
-void Entity::RenderSprite(SDL_Rect& sourceRect=nullptr) {
+void Entity::RenderSprite() {
 	if(m_sprite != nullptr) {
-		m_sprite->Render(m_renderer, sourceRect);
+		m_sprite->Render(m_renderer);
 	}
 }
 
@@ -59,7 +59,7 @@ void Entity::RenderCollider() {
 
 void Entity::RenderCollider(const int index) {
 	if(m_colliders.size() > 0) {
-		m_colliders[i]->Render(m_renderer);
+		m_colliders[index]->Render(m_renderer);
 	}
 }
 
@@ -74,24 +74,28 @@ void Entity::AddSprite(const char* spritePath) {
 		delete m_sprite;
 		m_sprite = new TexturedRect(m_renderer, spritePath);
 	}
-	SetPosition(0, 0);
-	SetDimention(0, 0);
+	m_sprite->SetRect(0, 0, 0, 0);
 }
 
 void Entity::AddSprite(const char* spritePath, SDL_Color key) {
 	if(m_sprite == nullptr) {
-		m_sprite = TexturedRect(m_renderer, spritePath, key);
+		m_sprite = new TexturedRect(m_renderer, spritePath, key);
 	} else {
 		delete m_sprite;
 		m_sprite = new TexturedRect(m_renderer, spritePath, key);
 	}
-	SetPosition(0, 0);
-	SetDimention(0, 0);
+	m_sprite->SetRect(0, 0, 0, 0);
 }
 
 void Entity::AddCollider2D() {
 	Collider* collider = new Collider();
-	m_colliders.push_bacK(collider);
+	m_colliders.push_back(collider);
+}
+
+void Entity::AddCollider2D(const int x, const int y, const int w, const int h) {
+	Collider* collider = new Collider();
+	collider->SetRect(x, y, w, h);
+	m_colliders.push_back(collider);
 }
 
 SDL_bool Entity::IsColliding(const Entity& obj) {
@@ -99,9 +103,9 @@ SDL_bool Entity::IsColliding(const Entity& obj) {
 	int loop = (obj.m_colliders.size() > m_colliders.size()) ? obj.m_colliders.size() : m_colliders.size();
 
 	for(int i=0; i<loop; i++) {
-		Collider& collider1 = m_colliders[i];
+		Collider& collider1 = *m_colliders[i];
 		Collider* collider2 = obj.m_colliders[i];
-		flag = collider1.IsColliding(collider2);
+		flag = collider1.IsColliding(*collider2);
 		if(flag) {
 			break;
 		}
@@ -135,27 +139,27 @@ void Entity::SetHeight(const int h) {
 }
 
 void Entity::SetPosition(const int index, const int x, const int y) {
-	m_colliders[index].SetPosition(x, y);
+	m_colliders[index]->SetPosition(x, y);
 }
 
 void Entity::SetPosX(const int index, const int x) {
-	m_colliders[index].SetPosX(x);
+	m_colliders[index]->SetPosX(x);
 }
 
 void Entity::SetPosY(const int index, const int y) {
-	m_colliders[index].SetPosY(y);
+	m_colliders[index]->SetPosY(y);
 }
 
 void Entity::SetDimention(const int index, const int w, const int h) {
-	m_colliders[index].SetDimention(w, h);
+	m_colliders[index]->SetDimention(w, h);
 }
 
 void Entity::SetWidth(const int index, const int w) {
-	m_colliders[index].SetWidth(w);
+	m_colliders[index]->SetWidth(w);
 }
 
 void Entity::SetHeight(const int index, const int h) {
-	m_colliders[index].SetHeight(h);
+	m_colliders[index]->SetHeight(h);
 }
 
 void Entity::SetColliderColorKey(SDL_Color key) {
@@ -168,21 +172,21 @@ void Entity::SetColliderColorKey(const int index, SDL_Color key) {
 	m_colliders[index]->SetColorKey(key);
 }
 
-void SetUpdateCallback(void (*updateCallback)(void)) {
+void Entity::SetUpdateCallback(void (*updateCallback)(void)) {
 	m_updateCallback = updateCallback;
 }
 
-void SetSpriteUpdateCallback(void (*updateCallback)(void)) {
+void Entity::SetSpriteUpdateCallback(void (*updateCallback)(void)) {
 	m_sprite->SetUpdateCallback(updateCallback);
 }
 
-void SetColliderUpdateCallback(void (*updateCallback)(void)) {
+void Entity::SetColliderUpdateCallback(void (*updateCallback)(void)) {
 	for(int i=0; i<m_colliders.size(); i++) {
 		m_colliders[i]->SetUpdateCallback(updateCallback);
 	}
 }
 
-void SetColliderUpdateCallback(const int index, void (*updateCallback)(void)) {
+void Entity::SetColliderUpdateCallback(const int index, void (*updateCallback)(void)) {
 	m_colliders[index]->SetUpdateCallback(updateCallback);
 }
 

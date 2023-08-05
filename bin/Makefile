@@ -131,17 +131,17 @@ SDL_PRACTICE/fast:
 .PHONY : SDL_PRACTICE/fast
 
 #=============================================================================
-# Target rules for targets named manager
+# Target rules for targets named ResourceManager
 
 # Build rule for target.
-manager: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 manager
-.PHONY : manager
+ResourceManager: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ResourceManager
+.PHONY : ResourceManager
 
 # fast build rule for target.
-manager/fast:
-	$(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/manager.dir/build.make lib/ResourceManager/CMakeFiles/manager.dir/build
-.PHONY : manager/fast
+ResourceManager/fast:
+	$(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/ResourceManager.dir/build.make lib/ResourceManager/CMakeFiles/ResourceManager.dir/build
+.PHONY : ResourceManager/fast
 
 #=============================================================================
 # Target rules for targets named appManager
@@ -168,6 +168,58 @@ textured_rect: cmake_check_build_system
 textured_rect/fast:
 	$(MAKE) $(MAKESILENT) -f lib/TexturedRectangle/CMakeFiles/textured_rect.dir/build.make lib/TexturedRectangle/CMakeFiles/textured_rect.dir/build
 .PHONY : textured_rect/fast
+
+#=============================================================================
+# Target rules for targets named AudioMixer
+
+# Build rule for target.
+AudioMixer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AudioMixer
+.PHONY : AudioMixer
+
+# fast build rule for target.
+AudioMixer/fast:
+	$(MAKE) $(MAKESILENT) -f lib/AudioMixer/CMakeFiles/AudioMixer.dir/build.make lib/AudioMixer/CMakeFiles/AudioMixer.dir/build
+.PHONY : AudioMixer/fast
+
+#=============================================================================
+# Target rules for targets named texturedFont
+
+# Build rule for target.
+texturedFont: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 texturedFont
+.PHONY : texturedFont
+
+# fast build rule for target.
+texturedFont/fast:
+	$(MAKE) $(MAKESILENT) -f lib/TexturedFonts/CMakeFiles/texturedFont.dir/build.make lib/TexturedFonts/CMakeFiles/texturedFont.dir/build
+.PHONY : texturedFont/fast
+
+#=============================================================================
+# Target rules for targets named Collider2D
+
+# Build rule for target.
+Collider2D: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Collider2D
+.PHONY : Collider2D
+
+# fast build rule for target.
+Collider2D/fast:
+	$(MAKE) $(MAKESILENT) -f lib/Collider2D/CMakeFiles/Collider2D.dir/build.make lib/Collider2D/CMakeFiles/Collider2D.dir/build
+.PHONY : Collider2D/fast
+
+#=============================================================================
+# Target rules for targets named GameEntity
+
+# Build rule for target.
+GameEntity: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GameEntity
+.PHONY : GameEntity
+
+# fast build rule for target.
+GameEntity/fast:
+	$(MAKE) $(MAKESILENT) -f lib/GameEntity/CMakeFiles/GameEntity.dir/build.make lib/GameEntity/CMakeFiles/GameEntity.dir/build
+.PHONY : GameEntity/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -201,9 +253,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... AudioMixer"
+	@echo "... Collider2D"
+	@echo "... GameEntity"
+	@echo "... ResourceManager"
 	@echo "... SDL_PRACTICE"
 	@echo "... appManager"
-	@echo "... manager"
+	@echo "... texturedFont"
 	@echo "... textured_rect"
 	@echo "... src/main.o"
 	@echo "... src/main.i"

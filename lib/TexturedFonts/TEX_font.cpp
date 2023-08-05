@@ -55,7 +55,7 @@ void TexturedFont::SetHeight(const int h) {
 	m_rectangle.h = h;
 }
 
-void TexturedFont::SetLabel(std::string labeL) {
+void TexturedFont::SetLabel(std::string label) {
 	SDL_FreeSurface(m_surface);
 
 	m_surface = TTF_RenderText_Solid(m_font, label.c_str(), m_fg);
@@ -99,7 +99,7 @@ std::string TexturedFont::GetLabel() const {
 
 void TexturedFont::Render(SDL_Renderer* renderer) {
 	if(m_texture == nullptr) {
-		m_texture = SDL_CreateRenderFromSurface(renderer, m_surface);
+		m_texture = SDL_CreateTextureFromSurface(renderer, m_surface);
 		SDL_FreeSurface(m_surface);
 		m_surface = nullptr;
 	}

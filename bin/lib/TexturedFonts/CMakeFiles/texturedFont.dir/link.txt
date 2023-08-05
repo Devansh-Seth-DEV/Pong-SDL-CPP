@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtexturedFont.a CMakeFiles/texturedFont.dir/TEX_font.cpp.o
+/usr/bin/ranlib libtexturedFont.a

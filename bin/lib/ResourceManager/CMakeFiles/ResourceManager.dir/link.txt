@@ -1,0 +1,2 @@
+/usr/bin/ar qc libResourceManager.a CMakeFiles/ResourceManager.dir/manager.cpp.o
+/usr/bin/ranlib libResourceManager.a

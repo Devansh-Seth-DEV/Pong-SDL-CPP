@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o -o SDL_PRACTICE  -lSDL2 -ldl lib/ResourceManager/libmanager.a lib/TexturedRectangle/libtextured_rect.a lib/SDLAppManager/libappManager.a 
+/usr/bin/c++ -rdynamic CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o -o SDL_PRACTICE  -lSDL2 -ldl lib/ResourceManager/libResourceManager.a lib/TexturedRectangle/libtextured_rect.a lib/SDLAppManager/libappManager.a lib/AudioMixer/libAudioMixer.a lib/TexturedFonts/libtexturedFont.a lib/Collider2D/libCollider2D.a lib/GameEntity/libGameEntity.a 

@@ -8,8 +8,13 @@ public:
 	Collider();
 	~Collider();
 
+	void SetRect(const int x, const int y, const int w, const int h);
 	void SetPosition(const int x, const int y);
+	void SetPosX(const int x);
+	void SetPosY(const int y);
 	void SetDimention(const int w, const int h);
+	void SetWidth(const int w);
+	void SetHeight(const int h);
 	void SetColorKey(SDL_Color key);
 	void SetUpdateCallback(void (*updateCallback)(void));
 

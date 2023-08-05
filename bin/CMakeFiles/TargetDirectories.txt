@@ -1,7 +1,7 @@
 /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/SDL_PRACTICE.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/edit_cache.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/rebuild_cache.dir
-/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/CMakeFiles/manager.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/CMakeFiles/ResourceManager.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/CMakeFiles/edit_cache.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/CMakeFiles/rebuild_cache.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLAppManager/CMakeFiles/appManager.dir
@@ -10,3 +10,15 @@
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle/CMakeFiles/textured_rect.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle/CMakeFiles/edit_cache.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle/CMakeFiles/rebuild_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer/CMakeFiles/AudioMixer.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer/CMakeFiles/edit_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer/CMakeFiles/rebuild_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts/CMakeFiles/texturedFont.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts/CMakeFiles/edit_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts/CMakeFiles/rebuild_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D/CMakeFiles/Collider2D.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D/CMakeFiles/edit_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D/CMakeFiles/rebuild_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/GameEntity/CMakeFiles/GameEntity.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/GameEntity/CMakeFiles/edit_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/GameEntity/CMakeFiles/rebuild_cache.dir

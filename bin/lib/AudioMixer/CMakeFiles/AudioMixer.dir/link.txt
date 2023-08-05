@@ -1,0 +1,2 @@
+/usr/bin/ar qc libAudioMixer.a CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o
+/usr/bin/ranlib libAudioMixer.a

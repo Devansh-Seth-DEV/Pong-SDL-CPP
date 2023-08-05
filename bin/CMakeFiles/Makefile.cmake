@@ -13,8 +13,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.26.4/CMakeSystem.cmake"
   "CMakeFiles/VerifyGlobs.cmake"
   "CMakeFiles/cmake.verify_globs"
+  "/home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/CMakeLists.txt"
+  "/home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/CMakeLists.txt"
+  "/home/devansh/C_C++/SDL_Learning/Practice/lib/GameEntity/CMakeLists.txt"
   "/home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/CMakeLists.txt"
   "/home/devansh/C_C++/SDL_Learning/Practice/lib/SDLAppManager/CMakeLists.txt"
+  "/home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/CMakeLists.txt"
   "/home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/CMakeLists.txt"
   "/usr/share/cmake-3.26/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.26/Modules/CMakeCXXInformation.cmake"
@@ -48,12 +52,20 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "lib/ResourceManager/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/SDLAppManager/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/TexturedRectangle/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/AudioMixer/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/TexturedFonts/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/Collider2D/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/GameEntity/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/SDL_PRACTICE.dir/DependInfo.cmake"
-  "lib/ResourceManager/CMakeFiles/manager.dir/DependInfo.cmake"
+  "lib/ResourceManager/CMakeFiles/ResourceManager.dir/DependInfo.cmake"
   "lib/SDLAppManager/CMakeFiles/appManager.dir/DependInfo.cmake"
   "lib/TexturedRectangle/CMakeFiles/textured_rect.dir/DependInfo.cmake"
+  "lib/AudioMixer/CMakeFiles/AudioMixer.dir/DependInfo.cmake"
+  "lib/TexturedFonts/CMakeFiles/texturedFont.dir/DependInfo.cmake"
+  "lib/Collider2D/CMakeFiles/Collider2D.dir/DependInfo.cmake"
+  "lib/GameEntity/CMakeFiles/GameEntity.dir/DependInfo.cmake"
   )

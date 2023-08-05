@@ -147,9 +147,8 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: \
  /usr/include/c++/12/bits/locale_facets.tcc \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
- /usr/include/c++/12/bits/istream.tcc \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.h \
- /usr/include/X11/../SDL2/SDL.h /usr/include/X11/../SDL2/SDL_main.h \
+ /usr/include/c++/12/bits/istream.tcc /usr/include/X11/../SDL2/SDL.h \
+ /usr/include/X11/../SDL2/SDL_main.h \
  /usr/include/X11/../SDL2/SDL_stdinc.h \
  /usr/include/X11/../SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -311,6 +310,10 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: \
  /usr/include/X11/../SDL2/SDL_version.h \
  /usr/include/X11/../SDL2/SDL_locale.h \
  /usr/include/X11/../SDL2/SDL_misc.h \
+ /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLAppManager/sdl_app_manager.h \
+ /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.h \
+ /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.h \
+ /usr/include/X11/../SDL2/SDL_ttf.h /usr/include/X11/../SDL2/SDL.h \
  /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.h \
  /usr/include/c++/12/unordered_map \
  /usr/include/c++/12/ext/aligned_buffer.h \
@@ -321,5 +324,11 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/unordered_map.h \
  /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/utility \
- /usr/include/c++/12/bits/stl_relops.h /usr/include/X11/../SDL2/SDL_ttf.h \
- /usr/include/X11/../SDL2/SDL.h
+ /usr/include/c++/12/bits/stl_relops.h \
+ /home/devansh/C_C++/SDL_Learning/Practice/lib/GameEntity/game_entity.h \
+ /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_uninitialized.h \
+ /usr/include/c++/12/bits/stl_vector.h \
+ /usr/include/c++/12/bits/stl_bvector.h \
+ /usr/include/c++/12/bits/vector.tcc \
+ /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.h \
+ /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.h

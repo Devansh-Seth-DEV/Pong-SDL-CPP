@@ -16,7 +16,7 @@ public:
 
 	void SetRect(const int x, const int y, const int w, const int h);
 	void SetPosX(const int x);
-	void SetPoxY(const int y);
+	void SetPosY(const int y);
 	void SetWidth(const int w);
 	void SetHeight(const int h);
 	void SetLabel(std::string label);

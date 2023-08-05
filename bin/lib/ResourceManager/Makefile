@@ -118,25 +118,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-lib/ResourceManager/CMakeFiles/manager.dir/rule:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/ResourceManager/CMakeFiles/manager.dir/rule
-.PHONY : lib/ResourceManager/CMakeFiles/manager.dir/rule
+lib/ResourceManager/CMakeFiles/ResourceManager.dir/rule:
+	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/ResourceManager/CMakeFiles/ResourceManager.dir/rule
+.PHONY : lib/ResourceManager/CMakeFiles/ResourceManager.dir/rule
 
 # Convenience name for target.
-manager: lib/ResourceManager/CMakeFiles/manager.dir/rule
-.PHONY : manager
+ResourceManager: lib/ResourceManager/CMakeFiles/ResourceManager.dir/rule
+.PHONY : ResourceManager
 
 # fast build rule for target.
-manager/fast:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/manager.dir/build.make lib/ResourceManager/CMakeFiles/manager.dir/build
-.PHONY : manager/fast
+ResourceManager/fast:
+	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/ResourceManager.dir/build.make lib/ResourceManager/CMakeFiles/ResourceManager.dir/build
+.PHONY : ResourceManager/fast
 
 manager.o: manager.cpp.o
 .PHONY : manager.o
 
 # target to build an object file
 manager.cpp.o:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/manager.dir/build.make lib/ResourceManager/CMakeFiles/manager.dir/manager.cpp.o
+	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/ResourceManager.dir/build.make lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o
 .PHONY : manager.cpp.o
 
 manager.i: manager.cpp.i
@@ -144,7 +144,7 @@ manager.i: manager.cpp.i
 
 # target to preprocess a source file
 manager.cpp.i:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/manager.dir/build.make lib/ResourceManager/CMakeFiles/manager.dir/manager.cpp.i
+	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/ResourceManager.dir/build.make lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.i
 .PHONY : manager.cpp.i
 
 manager.s: manager.cpp.s
@@ -152,7 +152,7 @@ manager.s: manager.cpp.s
 
 # target to generate assembly for a file
 manager.cpp.s:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/manager.dir/build.make lib/ResourceManager/CMakeFiles/manager.dir/manager.cpp.s
+	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/ResourceManager/CMakeFiles/ResourceManager.dir/build.make lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.s
 .PHONY : manager.cpp.s
 
 # Help Target
@@ -163,7 +163,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... manager"
+	@echo "... ResourceManager"
 	@echo "... manager.o"
 	@echo "... manager.i"
 	@echo "... manager.s"

@@ -1,19 +1,22 @@
 #ifndef TEX_RECT_H
 #define TEX_RECT_H
 
-//third party lib
-#include <SDL.h>
-#include <manager.h>
 #include <iostream>
+
+#include <SDL.h>
+
+#include <manager.h>
 
 class TexturedRect {
 public:
 	TexturedRect(SDL_Renderer* renderer, const char* sourcePath);
-	TexturedRect(SDL_Renderer, renderer, const char* sourcePath, SDL_Color key);
+	TexturedRect(SDL_Renderer* renderer, const char* sourcePath, SDL_Color key);
 
 	~TexturedRect();
 
 	void SetRect(const int x, const int y, const int w, const int h);
+	void SetPosition(const int x, const int y);
+	void SetDimention(const int w, const int h);
 	void SetWidth(const int w);
    	void SetHeight(const int h);
 	void SetPosX(const int x);
@@ -24,8 +27,10 @@ public:
 	int GetPosY() const;
 	int GetWidth() const;
 	int GetHeight() const;
+	SDL_Rect GetRect() const;
 
 	void Update();
+	void Render(SDL_Renderer* renderer);
 	void Render(SDL_Renderer* renderer, SDL_Rect& sourceRect);
 
 private:

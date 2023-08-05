@@ -38,6 +38,16 @@ void TexturedRect::SetRect(const int x, const int y, const int w, const int h) {
 	m_rectangle.h = h;
 }
 
+void TexturedRect::SetPosition(const int x, const int y) {
+	m_rectangle.x = x;
+	m_rectangle.y = y;
+}
+
+void TexturedRect::SetDimention(const int w, const int h) {
+	m_rectangle.w = w;
+	m_rectangle.h = h;
+}
+
 void TexturedRect::SetWidth(const int w) {
 	m_rectangle.w = w;
 }
@@ -74,8 +84,16 @@ int TexturedRect::GetHeight() const {
 	return m_rectangle.h;
 }
 
+SDL_Rect TexturedRect::GetRect() const {
+	return m_rectangle;
+}
+
 void TexturedRect::Update() {
 	m_updateCallback();
+}
+
+void TexturedRect::Render(SDL_Renderer* renderer) {
+	SDL_RenderCopy(renderer, m_texture, nullptr, &m_rectangle);
 }
 
 void TexturedRect::Render(SDL_Renderer* renderer, SDL_Rect& sourceRect) {

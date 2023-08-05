@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCollider2D.a CMakeFiles/Collider2D.dir/collider2d.cpp.o
+/usr/bin/ranlib libCollider2D.a

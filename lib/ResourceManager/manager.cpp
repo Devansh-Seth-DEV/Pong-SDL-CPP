@@ -1,8 +1,8 @@
 #include "manager.h"
 
 ResourceManager::~ResourceManager() {
-	delete s_staticInstance;
-	s_staticInstance = nullptr;
+	delete m_staticInstance;
+	m_staticInstance = nullptr;
 	std::unordered_map<std::string, TTF_Font*>::iterator it;
 	while(it != m_fonts.end()){
 		TTF_Font* font = it->second;
