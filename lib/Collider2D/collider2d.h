@@ -8,9 +8,11 @@ public:
 	Collider();
 	~Collider();
 
-	void SetAbsolutePos(const int x, const int y);
+	void SetPosition(const int x, const int y);
 	void SetDimention(const int w, const int h);
-	
+	void SetColorKey(SDL_Color key);
+	void SetUpdateCallback(void (*updateCallback)(void));
+
 	SDL_Rect& GetCollider() const;
 	int GetPosX() const;
 	int GetPosY() const;
@@ -19,10 +21,12 @@ public:
 
 	SDL_bool IsColliding(const Collider& obj) const;
 	void Update();
-	void Render(SDL_Renderer* renderer, SDL_Rect* sourceRect);
+	void Render(SDL_Renderer* renderer);
 
 private:
-	SDL_Rect* m_colliderRect;	
+	SDL_Rect* m_colliderRect;
+	void (*m_updateCallback)(void);
+	SDL_Color m_color;
 };
 
 #endif /* collider2d.h */

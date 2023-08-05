@@ -12,14 +12,26 @@ public:
 
 	~Entity();
 
-	void Update();
+	/* ================= METHODS ================= */
+	void Update() const;
+	void SpriteUpdate() const;
+	void ColliderUpdate() const;
+	void ColliderUpdate(const int index) const;
 	void Render();
+	void RenderSprite(SDL_Rect& sourceRect=nullptr);
+	void RenderCollider();
+	void RenderCollider(const int index);
 
-	void AddTexturedRect(const char* spritePath);
-	void AddTexturedRect(const char* spritePath, SDL_Color key);
+	void AddRenderer(SDL_Renderer* renderer);
+	void AddSprite(const char* spritePath);
+	void AddSprite(const char* spritePath, SDL_Color key);
 	void AddCollider2D();
+
 	SDL_bool IsColliding(const Entity& obj);
 
+
+	/* ================= SETTERS ================= */
+	// Sprite Setters:
 	void SetPosition(const int x, const int y);
 	void SetPosX(const int x);
 	void SetPoxY(const int y);
@@ -27,20 +39,40 @@ public:
 	void SetWidth(const int w);
 	void SetHeight(const int h);
 
-	Collider& GetCollider(const int index) const;
+	// Collider Setters:
+	void SetPosition(const int index, const int x, const int y);
+	void SetPosX(const int index, const int x);
+	void SetPosY(const int index, const int y);
+	void SetDimention(const int index, const int w, const int h);
+	void SetWidth(const int index, const int w);
+	void SetHeight(const int index, const int h);
+	void SetColliderColorKey(SDL_color key);
+	void SetColliderColorKey(const int index, SDL_Color key);
+
+	void SetUpdateCallback(void (*updateCallback)(void));
+	void SetSpriteUpdateCallback(void (*updateCallback)(void));
+	void SetColliderUpdateCallback(void (*updateCallback)(void));
+	void SetColliderUpdateCallback(const int index, void (*updateCallback)(void));
+
+	/* ================= GETTERS ================= */
+	// Sprite Getters:
 	int GetPosX() const;
 	int GetPosY() const;
 	int GetWidth() const;
 	int GetHeight() const;
-	int GetColliderPosX(const int index) const;
-	int GetColliderPosY(const int index) const;
-	int GetColliderWidth(const int index) const;
-	int GetColliderHeight(const int index) const;
+	
+	// Collider Getters:
+	Collider& GetCollider(const int index) const;
+	int GetPosX(const int index) const;
+	int GetPosY(const int index) const;
+	int GetWidth(const int index) const;
+	int GetHeight(const int index) const;
 
 private:
 	SDL_Renderer* m_renderer;
 	TexturedRect* m_sprite;
 	std::vector<Collider*> m_colliders;
+	void (*m_updateCallback)(void);
 };
 
 #endif /* game_entity.h */

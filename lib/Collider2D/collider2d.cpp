@@ -1,6 +1,7 @@
 #include "collider2d.h"
 
 Collider::Collider() {
+	m_color = {255, 255, 255, SDL_ALPHA_OPAQUE};
 	m_colliderRect = new SDL_Rect;
 	SetAbsolutePos(0, 0);
 	SetDimention(0, 0);
@@ -11,7 +12,7 @@ Collider::~Collider() {
 	m_colliderRect = nullptr;
 }
 
-void Collider::SetAbsolutePos(const int x, const int y) {
+void Collider::SetPosition(const int x, const int y) {
 	m_colliderRect->x = x;
 	m_colliderRect->y = y;
 }
@@ -19,6 +20,14 @@ void Collider::SetAbsolutePos(const int x, const int y) {
 void Collider::SetDimention(const int w, const int h) {
 	m_colliderRect->w = w;
 	m_colliderRect->h = h;
+}
+
+void Collider::SetColorKey(SDL_Color key) {
+	m_color = key;
+}
+
+void SetUpdateCallback(void (*updateCallback)(void)) {
+	m_updateCallback = updateCallback;
 }
 
 SDL_Rect& Collider::GetCollider() const {
@@ -49,8 +58,11 @@ SDL_bool IsColliding(const Collider& obj) const {
 	}
 }
 
-void Collider::Update()
-{}
+void Collider::Update() {
+	m_updateCallback();
+}
 
-void Collider::Render(SDL_Renderer* renderer, SDL_Rect* sourceRect)
-{}
+void Collider::Render(SDL_Renderer* renderer) {
+	SDL_SetRenderDrawColor(renderer, m_color[0], m_color[1], m_color[2], m_color[3]);
+	SDL_RenderDrawRect(renderer, m_colliderRect);
+}
