@@ -4,6 +4,7 @@
 #include <vector>
 #include <SDL.h>
 #include <TEX_rect.h>
+#include <collider2d.h>
 
 class Entity {
 public:
