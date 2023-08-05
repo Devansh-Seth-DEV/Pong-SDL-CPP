@@ -1,3 +1,6 @@
+#ifndef TEX_RECT_H
+#define TEX_RECT_H
+
 //third party lib
 #include <SDL.h>
 #include <manager.h>
@@ -32,3 +35,5 @@ private:
 	SDL_Color m_colorKey;
 	void (*m_updateCallback)(void);
 };
+
+#endif /* TEX_rect.h */
