@@ -40,3 +40,19 @@ $ sudo apt-get install libsdl2-ttf-dev
 ```bash
 $ sudo apt-get install libsdl2-mixer-dev
 ```
+<br>
+
+Build
+-
+1. Run CMake command using `config` file
+```bash
+$ sh config.sh
+```
+2. Build project using `build` file
+```bash
+$ sh build.sh
+```
+3. Run project using `run` file
+```bash
+$ sh run.sh
+```
