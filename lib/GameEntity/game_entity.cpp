@@ -1,11 +1,11 @@
 #include "game_entity.h"
 
 Entity::Entity()
-	: m_sprite(nullptr), m_renderer(nullptr)
+	: m_sprite(nullptr), m_renderer(nullptr), m_updateCallback(nullptr)
 {}
 
 Entity::Entity(SDL_Renderer* renderer)
-	: m_sprite(nullptr), m_renderer(renderer)
+	: m_sprite(nullptr), m_renderer(renderer), m_updateCallback(nullptr)
 {}
 
 Entity::~Entity() {
@@ -15,23 +15,25 @@ Entity::~Entity() {
 	}
 }
 
-void Entity::Update() const {
-	m_updateCallback();
+void Entity::Update() {
+	if(m_updateCallback != nullptr) {
+		m_updateCallback();
+	}
 	SpriteUpdate();
 	ColliderUpdate();
 }
 
-void Entity::SpriteUpdate() const {
+void Entity::SpriteUpdate() {
 	m_sprite->Update();
 }
 
-void Entity::ColliderUpdate() const {
+void Entity::ColliderUpdate() {
 	for(int i=0; i<m_colliders.size(); i++) {
 		m_colliders[i]->Update();
 	}
 }
 
-void Entity::ColliderUpdate(const int index) const {
+void Entity::ColliderUpdate(const int index) {
 	m_colliders[index]->Update();
 }
 

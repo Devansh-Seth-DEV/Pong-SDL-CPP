@@ -1,6 +1,8 @@
 #include "collider2d.h"
 
-Collider::Collider() {
+Collider::Collider()
+	: m_updateCallback(nullptr)
+{
 	m_color = {255, 255, 255, SDL_ALPHA_OPAQUE};
 	m_colliderRect = new SDL_Rect;
 	SetRect(0, 0, 0, 0);
@@ -81,7 +83,9 @@ SDL_bool Collider::IsColliding(const Collider& obj) const {
 }
 
 void Collider::Update() {
-	m_updateCallback();
+	if(m_updateCallback != nullptr) {
+		m_updateCallback();
+	}
 }
 
 void Collider::Render(SDL_Renderer* renderer) {

@@ -7,7 +7,7 @@ file(GLOB SourceFiles CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 add_executable(${PROJECT_NAME} ${SourceFiles})
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/lib/ResourceManager)
-add_subdirectory(${PROJECT_SOURCE_DIR}/lib/SDLAppManager)
+add_subdirectory(${PROJECT_SOURCE_DIR}/lib/SDLEngine)
 add_subdirectory(${PROJECT_SOURCE_DIR}/lib/TexturedRectangle)
 add_subdirectory(${PROJECT_SOURCE_DIR}/lib/AudioMixer)
 add_subdirectory(${PROJECT_SOURCE_DIR}/lib/TexturedFonts)
@@ -19,7 +19,7 @@ target_include_directories(${PROJECT_NAME}
 	PUBLIC ${PROJECT_BINARY_DIR}
 	PUBLIC ${PROJECT_SOURCE_DIR}/include
 	PUBLIC ${PROJECT_SOURCE_DIR}/lib/ResourceManager
-	PUBLIC ${PROJECT_SOURCE_DIR}/lib/SDLAppManager
+	PUBLIC ${PROJECT_SOURCE_DIR}/lib/SDLEngine
 	PUBLIC ${PROJECT_SOURCE_DIR}/lib/TexturedRectangle
 	PUBLIC ${PROJECT_SOURCE_DIR}/lib/AudioMixer
 	PUBLIC ${PROJECT_SOURCE_DIR}/lib/TexturedFonts
@@ -32,7 +32,7 @@ target_link_libraries(${PROJECT_NAME}
 	PRIVATE dl
 	PRIVATE ResourceManager
 	PRIVATE textured_rect
-	PRIVATE appManager
+	PRIVATE SDLEngine
 	PRIVATE AudioMixer
 	PRIVATE texturedFont
 	PRIVATE Collider2D

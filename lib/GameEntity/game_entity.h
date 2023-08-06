@@ -14,10 +14,10 @@ public:
 	~Entity();
 
 	/* ================= METHODS ================= */
-	void Update() const;
-	void SpriteUpdate() const;
-	void ColliderUpdate() const;
-	void ColliderUpdate(const int index) const;
+	void Update();
+	void SpriteUpdate();
+	void ColliderUpdate();
+	void ColliderUpdate(const int index);
 	void Render();
 	void RenderSprite();
 	void RenderCollider();

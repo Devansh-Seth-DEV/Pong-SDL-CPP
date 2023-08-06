@@ -18,7 +18,7 @@ public:
 	
 	~SDLApp();
 
-	void SetWindowBackgroundColor(RGB_ColorChannel color);
+	void SetWindowBackgroundColor(SDL_Color color);
 	void SetEventCallback(void (*func)(void));
 	void SetRenderCallback(void (*func)(void));
 	void SetUpdateCallback(void (*func)(void));
@@ -36,7 +36,7 @@ private:
 
 	SDL_Window* m_window;
 	SDL_Renderer* m_renderer;
-	RGB_ColorChannel m_winBackgroundColor;
+	SDL_Color m_bgColor;
 	bool m_run;
 	uint8_t m_maxFrameRate;
 

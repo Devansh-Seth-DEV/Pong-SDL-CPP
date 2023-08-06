@@ -2,7 +2,9 @@
 
 ResourceManager& TexturedRect::s_resourceManager = ResourceManager::GetInstance();
 
-TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath) {
+TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath)
+	: m_updateCallback(nullptr)
+{
 	SDL_Surface* surface = s_resourceManager.GetSurface(sourcePath);
 	if(surface == nullptr) {
 		std::cerr << "Textured Rectangle Surface Error: " << SDL_GetError() << std::endl;
@@ -12,7 +14,9 @@ TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath) {
 	SDL_FreeSurface(surface);
 }
 
-TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath, SDL_Color key) {
+TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath, SDL_Color key)
+	: m_updateCallback(nullptr)
+{
 	SDL_Surface* surface = s_resourceManager.GetSurface(sourcePath);
 	if(surface == nullptr) {
 		std::cerr << "textured rectangle surface error: " << SDL_GetError() << std::endl;
@@ -89,7 +93,9 @@ SDL_Rect TexturedRect::GetRect() const {
 }
 
 void TexturedRect::Update() {
-	m_updateCallback();
+	if(m_updateCallback != nullptr) {
+		m_updateCallback();
+	}
 }
 
 void TexturedRect::Render(SDL_Renderer* renderer) {

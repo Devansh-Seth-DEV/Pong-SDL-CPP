@@ -184,7 +184,6 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
-  /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_main.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -356,6 +355,11 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/SDL_locale.h \
   /usr/include/SDL2/SDL_misc.h \
+  /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLAppManager/sdl_app_manager.h \
+  /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.h \
+  /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.h \
+  /usr/include/SDL2/SDL_ttf.h \
+  /usr/include/SDL2/SDL.h \
   /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.h \
   /usr/include/c++/12/unordered_map \
   /usr/include/c++/12/ext/aligned_buffer.h \
@@ -369,9 +373,23 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
   /usr/include/c++/12/bits/erase_if.h \
   /usr/include/c++/12/utility \
   /usr/include/c++/12/bits/stl_relops.h \
-  /usr/include/SDL2/SDL_ttf.h \
-  /usr/include/SDL2/SDL.h
+  /home/devansh/C_C++/SDL_Learning/Practice/lib/GameEntity/game_entity.h \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.h \
+  /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.h
 
+
+/home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.h:
+
+/usr/include/c++/12/bits/stl_bvector.h:
+
+/usr/include/c++/12/bits/stl_vector.h:
+
+/home/devansh/C_C++/SDL_Learning/Practice/lib/GameEntity/game_entity.h:
 
 /usr/include/c++/12/bits/stl_relops.h:
 
@@ -505,8 +523,6 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/tbmintrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/12/include/sgxintrin.h:
-
 /usr/include/c++/12/bits/basic_string.h:
 
 /usr/include/c++/12/bits/range_access.h:
@@ -545,9 +561,13 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 
 /usr/include/c++/12/bits/allocator.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/12/include/sgxintrin.h:
+
 /usr/include/c++/12/bits/ostream_insert.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/c++/12/vector:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
@@ -564,6 +584,8 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 /usr/include/c++/12/string:
 
 /usr/include/c++/12/bits/node_handle.h:
+
+/home/devansh/C_C++/SDL_Learning/Practice/lib/SDLAppManager/sdl_app_manager.h:
 
 /usr/include/c++/12/ext/atomicity.h:
 
@@ -853,6 +875,8 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 
 /usr/include/c++/12/bits/cxxabi_init_exception.h:
 
+/home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h:
@@ -901,6 +925,8 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 
 /usr/include/SDL2/SDL_assert.h:
 
+/usr/include/c++/12/bits/vector.tcc:
+
 /usr/include/c++/12/ext/string_conversions.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/serializeintrin.h:
@@ -912,6 +938,8 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -927,9 +955,9 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 
 /usr/include/endian.h:
 
-/usr/include/SDL2/SDL_timer.h:
-
 /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.h:
+
+/usr/include/SDL2/SDL_timer.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
@@ -1016,6 +1044,8 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/12/bits/stl_uninitialized.h:
 
 /usr/include/SDL2/SDL_rect.h:
 
