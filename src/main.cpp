@@ -2,7 +2,7 @@
 
 #include <SDL.h>
 
-#include <sdl_app_manager.h>
+#include <engine.h>
 #include <audio_mixer.h>
 #include <TEX_font.h>
 #include <game_entity.h>
