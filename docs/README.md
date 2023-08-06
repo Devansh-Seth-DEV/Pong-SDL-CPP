@@ -16,8 +16,6 @@ Official Website: [SDL](https://www.libsdl.org/)
 This API is a more abstract of SDL <br>
 Basic app development becomes more easy using the custom API in `lib` directory
 <br>
-> NOTE: Compilation is designed for Linux using CMake
-<br>
 
 SDL2 Linux Installation
 -
@@ -44,6 +42,8 @@ $ sudo apt-get install libsdl2-mixer-dev
 
 Build
 -
+> NOTE: Do run the commands in project directory
+
 1. Run CMake command using `config` file
 ```bash
 $ sh config.sh
