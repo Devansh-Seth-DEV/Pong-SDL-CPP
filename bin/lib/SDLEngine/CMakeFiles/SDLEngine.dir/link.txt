@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSDLEngine.a CMakeFiles/SDLEngine.dir/engine.cpp.o
+/usr/bin/ranlib libSDLEngine.a

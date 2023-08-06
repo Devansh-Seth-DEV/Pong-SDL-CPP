@@ -45,7 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/cmake_install.cmake")
-  include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLAppManager/cmake_install.cmake")
+  include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine/cmake_install.cmake")
   include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle/cmake_install.cmake")
   include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer/cmake_install.cmake")
   include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts/cmake_install.cmake")

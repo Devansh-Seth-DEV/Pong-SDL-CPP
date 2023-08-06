@@ -1,12 +1,13 @@
 /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/SDL_PRACTICE.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/deps.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/edit_cache.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/rebuild_cache.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/CMakeFiles/ResourceManager.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/CMakeFiles/edit_cache.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/CMakeFiles/rebuild_cache.dir
-/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLAppManager/CMakeFiles/appManager.dir
-/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLAppManager/CMakeFiles/edit_cache.dir
-/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLAppManager/CMakeFiles/rebuild_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine/CMakeFiles/SDLEngine.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine/CMakeFiles/edit_cache.dir
+/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine/CMakeFiles/rebuild_cache.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle/CMakeFiles/textured_rect.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle/CMakeFiles/edit_cache.dir
 /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle/CMakeFiles/rebuild_cache.dir

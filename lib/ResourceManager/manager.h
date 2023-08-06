@@ -16,15 +16,15 @@ public:
 
 	static ResourceManager& GetInstance();
 	SDL_Surface* GetSurface(std::string sourcePath);
-	TTF_Font* GetFont(std::string fontFilePath, const int fontSize);
+	TTF_Font* GetFont(const char* fontFilePath, const int fontSize);
 
 private:
 	ResourceManager();
 	ResourceManager(const ResourceManager& manager);
 	ResourceManager operator=(const ResourceManager& manager);
+	static ResourceManager* Instance();
 
 private:
-	static ResourceManager* m_staticInstance;
 	std::unordered_map<std::string, SDL_Surface*> m_surfaces;
 	std::unordered_map<std::string, TTF_Font*> m_fonts;
 };

@@ -7,23 +7,39 @@
 #include <TEX_font.h>
 #include <game_entity.h>
 
-SDLApp* app;
+SDLApp app;
+TexturedFont label;
 
-void EventLoop() {
+void HandleEvent() {
 	SDL_Event event;
 	while(SDL_PollEvent(&event)) {
 		if(event.type == SDL_QUIT) {
-			app->StopAppLoop();
+			app.StopAppLoop();
 		}
 	}
 }
 
-int main() {
-	app = new SDLApp("SDL Window", 100, 100, 640, 400, SDL_WINDOW_SHOWN, -1, SDL_RENDERER_ACCELERATED);
-	app->SetWindowBackgroundColor({255, 255, 255, SDL_ALPHA_OPAQUE});
-	app->SetMaxFrameRate(60);
 
-	app->SetEventCallback(EventLoop);
-	app->StartAppLoop();
+void HandleRender() {
+	label.Render();
+}
+
+int main() {
+	const char* fontPath = "./assets/fonts/Open_24_Display_St.ttf";
+	const char* text = "HELLO WORLD";
+	SDL_Color textfg = {255, 255, 255, SDL_ALPHA_OPAQUE};
+	SDL_Renderer* renderer;
+
+	app.App("SDL Greeting", 100, 100, 640, 400, SDL_WINDOW_SHOWN, -1, SDL_RENDERER_ACCELERATED); 
+	app.SetWindowBackgroundColor({0, 0, 0, SDL_ALPHA_OPAQUE});
+	app.SetMaxFrameRate(60);
+	renderer = app.GetRenderer();
+	
+	label.Label(renderer, fontPath, 32, text, textfg);
+	label.SetRect(app.GetWidth()/2-100, app.GetHeight()/2-50-32, 200, 100);
+
+	app.SetEventCallback(HandleEvent);
+	app.SetRenderCallback(HandleRender);
+	app.StartAppLoop();
 	return 0;
 }

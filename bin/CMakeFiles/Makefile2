@@ -64,8 +64,9 @@ CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/Practice/bin
 
 # The main recursive "all" target.
 all: CMakeFiles/SDL_PRACTICE.dir/all
+all: CMakeFiles/deps.dir/all
 all: lib/ResourceManager/all
-all: lib/SDLAppManager/all
+all: lib/SDLEngine/all
 all: lib/TexturedRectangle/all
 all: lib/AudioMixer/all
 all: lib/TexturedFonts/all
@@ -75,7 +76,7 @@ all: lib/GameEntity/all
 
 # The main recursive "preinstall" target.
 preinstall: lib/ResourceManager/preinstall
-preinstall: lib/SDLAppManager/preinstall
+preinstall: lib/SDLEngine/preinstall
 preinstall: lib/TexturedRectangle/preinstall
 preinstall: lib/AudioMixer/preinstall
 preinstall: lib/TexturedFonts/preinstall
@@ -85,8 +86,9 @@ preinstall: lib/GameEntity/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/SDL_PRACTICE.dir/clean
+clean: CMakeFiles/deps.dir/clean
 clean: lib/ResourceManager/clean
-clean: lib/SDLAppManager/clean
+clean: lib/SDLEngine/clean
 clean: lib/TexturedRectangle/clean
 clean: lib/AudioMixer/clean
 clean: lib/TexturedFonts/clean
@@ -155,19 +157,19 @@ lib/ResourceManager/clean: lib/ResourceManager/CMakeFiles/ResourceManager.dir/cl
 .PHONY : lib/ResourceManager/clean
 
 #=============================================================================
-# Directory level rules for directory lib/SDLAppManager
+# Directory level rules for directory lib/SDLEngine
 
 # Recursive "all" directory target.
-lib/SDLAppManager/all: lib/SDLAppManager/CMakeFiles/appManager.dir/all
-.PHONY : lib/SDLAppManager/all
+lib/SDLEngine/all: lib/SDLEngine/CMakeFiles/SDLEngine.dir/all
+.PHONY : lib/SDLEngine/all
 
 # Recursive "preinstall" directory target.
-lib/SDLAppManager/preinstall:
-.PHONY : lib/SDLAppManager/preinstall
+lib/SDLEngine/preinstall:
+.PHONY : lib/SDLEngine/preinstall
 
 # Recursive "clean" directory target.
-lib/SDLAppManager/clean: lib/SDLAppManager/CMakeFiles/appManager.dir/clean
-.PHONY : lib/SDLAppManager/clean
+lib/SDLEngine/clean: lib/SDLEngine/CMakeFiles/SDLEngine.dir/clean
+.PHONY : lib/SDLEngine/clean
 
 #=============================================================================
 # Directory level rules for directory lib/TexturedFonts
@@ -203,8 +205,9 @@ lib/TexturedRectangle/clean: lib/TexturedRectangle/CMakeFiles/textured_rect.dir/
 # Target rules for target CMakeFiles/SDL_PRACTICE.dir
 
 # All Build rule for target.
+CMakeFiles/SDL_PRACTICE.dir/all: CMakeFiles/deps.dir/all
 CMakeFiles/SDL_PRACTICE.dir/all: lib/ResourceManager/CMakeFiles/ResourceManager.dir/all
-CMakeFiles/SDL_PRACTICE.dir/all: lib/SDLAppManager/CMakeFiles/appManager.dir/all
+CMakeFiles/SDL_PRACTICE.dir/all: lib/SDLEngine/CMakeFiles/SDLEngine.dir/all
 CMakeFiles/SDL_PRACTICE.dir/all: lib/TexturedRectangle/CMakeFiles/textured_rect.dir/all
 CMakeFiles/SDL_PRACTICE.dir/all: lib/AudioMixer/CMakeFiles/AudioMixer.dir/all
 CMakeFiles/SDL_PRACTICE.dir/all: lib/TexturedFonts/CMakeFiles/texturedFont.dir/all
@@ -212,12 +215,12 @@ CMakeFiles/SDL_PRACTICE.dir/all: lib/Collider2D/CMakeFiles/Collider2D.dir/all
 CMakeFiles/SDL_PRACTICE.dir/all: lib/GameEntity/CMakeFiles/GameEntity.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL_PRACTICE.dir/build.make CMakeFiles/SDL_PRACTICE.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL_PRACTICE.dir/build.make CMakeFiles/SDL_PRACTICE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=9,10 "Built target SDL_PRACTICE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=11,12 "Built target SDL_PRACTICE"
 .PHONY : CMakeFiles/SDL_PRACTICE.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SDL_PRACTICE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SDL_PRACTICE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 0
 .PHONY : CMakeFiles/SDL_PRACTICE.dir/rule
@@ -230,6 +233,32 @@ SDL_PRACTICE: CMakeFiles/SDL_PRACTICE.dir/rule
 CMakeFiles/SDL_PRACTICE.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDL_PRACTICE.dir/build.make CMakeFiles/SDL_PRACTICE.dir/clean
 .PHONY : CMakeFiles/SDL_PRACTICE.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/deps.dir
+
+# All Build rule for target.
+CMakeFiles/deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/deps.dir/build.make CMakeFiles/deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/deps.dir/build.make CMakeFiles/deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=13 "Built target deps"
+.PHONY : CMakeFiles/deps.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 0
+.PHONY : CMakeFiles/deps.dir/rule
+
+# Convenience name for target.
+deps: CMakeFiles/deps.dir/rule
+.PHONY : deps
+
+# clean rule for target.
+CMakeFiles/deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/deps.dir/build.make CMakeFiles/deps.dir/clean
+.PHONY : CMakeFiles/deps.dir/clean
 
 #=============================================================================
 # Target rules for target lib/ResourceManager/CMakeFiles/ResourceManager.dir
@@ -258,30 +287,30 @@ lib/ResourceManager/CMakeFiles/ResourceManager.dir/clean:
 .PHONY : lib/ResourceManager/CMakeFiles/ResourceManager.dir/clean
 
 #=============================================================================
-# Target rules for target lib/SDLAppManager/CMakeFiles/appManager.dir
+# Target rules for target lib/SDLEngine/CMakeFiles/SDLEngine.dir
 
 # All Build rule for target.
-lib/SDLAppManager/CMakeFiles/appManager.dir/all:
-	$(MAKE) $(MAKESILENT) -f lib/SDLAppManager/CMakeFiles/appManager.dir/build.make lib/SDLAppManager/CMakeFiles/appManager.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/SDLAppManager/CMakeFiles/appManager.dir/build.make lib/SDLAppManager/CMakeFiles/appManager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=11,12 "Built target appManager"
-.PHONY : lib/SDLAppManager/CMakeFiles/appManager.dir/all
+lib/SDLEngine/CMakeFiles/SDLEngine.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=9,10 "Built target SDLEngine"
+.PHONY : lib/SDLEngine/CMakeFiles/SDLEngine.dir/all
 
 # Build rule for subdir invocation for target.
-lib/SDLAppManager/CMakeFiles/appManager.dir/rule: cmake_check_build_system
+lib/SDLEngine/CMakeFiles/SDLEngine.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLAppManager/CMakeFiles/appManager.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/CMakeFiles/SDLEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 0
-.PHONY : lib/SDLAppManager/CMakeFiles/appManager.dir/rule
+.PHONY : lib/SDLEngine/CMakeFiles/SDLEngine.dir/rule
 
 # Convenience name for target.
-appManager: lib/SDLAppManager/CMakeFiles/appManager.dir/rule
-.PHONY : appManager
+SDLEngine: lib/SDLEngine/CMakeFiles/SDLEngine.dir/rule
+.PHONY : SDLEngine
 
 # clean rule for target.
-lib/SDLAppManager/CMakeFiles/appManager.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/SDLAppManager/CMakeFiles/appManager.dir/build.make lib/SDLAppManager/CMakeFiles/appManager.dir/clean
-.PHONY : lib/SDLAppManager/CMakeFiles/appManager.dir/clean
+lib/SDLEngine/CMakeFiles/SDLEngine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/clean
+.PHONY : lib/SDLEngine/CMakeFiles/SDLEngine.dir/clean
 
 #=============================================================================
 # Target rules for target lib/TexturedRectangle/CMakeFiles/textured_rect.dir
@@ -290,7 +319,7 @@ lib/SDLAppManager/CMakeFiles/appManager.dir/clean:
 lib/TexturedRectangle/CMakeFiles/textured_rect.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/TexturedRectangle/CMakeFiles/textured_rect.dir/build.make lib/TexturedRectangle/CMakeFiles/textured_rect.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/TexturedRectangle/CMakeFiles/textured_rect.dir/build.make lib/TexturedRectangle/CMakeFiles/textured_rect.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=15,16 "Built target textured_rect"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=16,17 "Built target textured_rect"
 .PHONY : lib/TexturedRectangle/CMakeFiles/textured_rect.dir/all
 
 # Build rule for subdir invocation for target.
@@ -339,15 +368,15 @@ lib/AudioMixer/CMakeFiles/AudioMixer.dir/clean:
 # Target rules for target lib/TexturedFonts/CMakeFiles/texturedFont.dir
 
 # All Build rule for target.
-lib/TexturedFonts/CMakeFiles/texturedFont.dir/all:
+lib/TexturedFonts/CMakeFiles/texturedFont.dir/all: lib/ResourceManager/CMakeFiles/ResourceManager.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/TexturedFonts/CMakeFiles/texturedFont.dir/build.make lib/TexturedFonts/CMakeFiles/texturedFont.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/TexturedFonts/CMakeFiles/texturedFont.dir/build.make lib/TexturedFonts/CMakeFiles/texturedFont.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=13,14 "Built target texturedFont"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=14,15 "Built target texturedFont"
 .PHONY : lib/TexturedFonts/CMakeFiles/texturedFont.dir/all
 
 # Build rule for subdir invocation for target.
 lib/TexturedFonts/CMakeFiles/texturedFont.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/TexturedFonts/CMakeFiles/texturedFont.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 0
 .PHONY : lib/TexturedFonts/CMakeFiles/texturedFont.dir/rule

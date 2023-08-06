@@ -27,8 +27,19 @@ target_include_directories(${PROJECT_NAME}
 	PUBLIC ${PROJECT_SOURCE_DIR}/lib/GameEntity
 )
 
+add_custom_target(deps ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${PROJECT_SOURCE_DIR}/assets
+        ${PROJECT_BINARY_DIR}/assets
+
+        COMMENT "Creating dependencies"
+)
+add_dependencies(${PROJECT_NAME} deps)
+
 target_link_libraries(${PROJECT_NAME}
 	PRIVATE SDL2
+	PRIVATE SDL2_ttf
+	PRIVATE SDL2_mixer
 	PRIVATE dl
 	PRIVATE ResourceManager
 	PRIVATE textured_rect

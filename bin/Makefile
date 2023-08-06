@@ -131,6 +131,19 @@ SDL_PRACTICE/fast:
 .PHONY : SDL_PRACTICE/fast
 
 #=============================================================================
+# Target rules for targets named deps
+
+# Build rule for target.
+deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 deps
+.PHONY : deps
+
+# fast build rule for target.
+deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/deps.dir/build.make CMakeFiles/deps.dir/build
+.PHONY : deps/fast
+
+#=============================================================================
 # Target rules for targets named ResourceManager
 
 # Build rule for target.
@@ -144,17 +157,17 @@ ResourceManager/fast:
 .PHONY : ResourceManager/fast
 
 #=============================================================================
-# Target rules for targets named appManager
+# Target rules for targets named SDLEngine
 
 # Build rule for target.
-appManager: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 appManager
-.PHONY : appManager
+SDLEngine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDLEngine
+.PHONY : SDLEngine
 
 # fast build rule for target.
-appManager/fast:
-	$(MAKE) $(MAKESILENT) -f lib/SDLAppManager/CMakeFiles/appManager.dir/build.make lib/SDLAppManager/CMakeFiles/appManager.dir/build
-.PHONY : appManager/fast
+SDLEngine/fast:
+	$(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/build
+.PHONY : SDLEngine/fast
 
 #=============================================================================
 # Target rules for targets named textured_rect
@@ -253,12 +266,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... deps"
 	@echo "... AudioMixer"
 	@echo "... Collider2D"
 	@echo "... GameEntity"
 	@echo "... ResourceManager"
+	@echo "... SDLEngine"
 	@echo "... SDL_PRACTICE"
-	@echo "... appManager"
 	@echo "... texturedFont"
 	@echo "... textured_rect"
 	@echo "... src/main.o"

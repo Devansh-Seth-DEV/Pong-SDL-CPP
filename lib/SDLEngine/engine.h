@@ -14,7 +14,9 @@ struct RGB_ColorChannel {
 
 class SDLApp {
 public:
+	SDLApp();
 	SDLApp(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, int renderIndex, Uint32 renderFlags);
+	void App(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, int renderIndex, Uint32 renderFlags);
 	
 	~SDLApp();
 
@@ -24,7 +26,7 @@ public:
 	void SetUpdateCallback(void (*func)(void));
 	void SetMaxFrameRate(uint8_t fps);
 
-	SDL_Renderer& GetRenderer() const;
+	SDL_Renderer* GetRenderer() const;
 	int GetWidth() const;
 	int GetHeight() const;
 

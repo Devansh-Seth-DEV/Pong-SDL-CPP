@@ -355,7 +355,7 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/SDL_locale.h \
   /usr/include/SDL2/SDL_misc.h \
-  /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLAppManager/sdl_app_manager.h \
+  /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.h \
   /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.h \
   /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.h \
   /usr/include/SDL2/SDL_ttf.h \
@@ -402,6 +402,8 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 /usr/include/c++/12/unordered_map:
 
 /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.h:
+
+/home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.h:
 
 /usr/include/SDL2/SDL_system.h:
 
@@ -584,8 +586,6 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/Pra
 /usr/include/c++/12/string:
 
 /usr/include/c++/12/bits/node_handle.h:
-
-/home/devansh/C_C++/SDL_Learning/Practice/lib/SDLAppManager/sdl_app_manager.h:
 
 /usr/include/c++/12/ext/atomicity.h:
 

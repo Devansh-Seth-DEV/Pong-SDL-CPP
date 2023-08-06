@@ -94,11 +94,12 @@ SDL_PRACTICE: CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o
 SDL_PRACTICE: CMakeFiles/SDL_PRACTICE.dir/build.make
 SDL_PRACTICE: lib/ResourceManager/libResourceManager.a
 SDL_PRACTICE: lib/TexturedRectangle/libtextured_rect.a
-SDL_PRACTICE: lib/SDLAppManager/libappManager.a
+SDL_PRACTICE: lib/SDLEngine/libSDLEngine.a
 SDL_PRACTICE: lib/AudioMixer/libAudioMixer.a
 SDL_PRACTICE: lib/TexturedFonts/libtexturedFont.a
 SDL_PRACTICE: lib/Collider2D/libCollider2D.a
 SDL_PRACTICE: lib/GameEntity/libGameEntity.a
+SDL_PRACTICE: lib/ResourceManager/libResourceManager.a
 SDL_PRACTICE: CMakeFiles/SDL_PRACTICE.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SDL_PRACTICE"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDL_PRACTICE.dir/link.txt --verbose=$(VERBOSE)

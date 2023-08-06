@@ -1,8 +1,7 @@
 #include "manager.h"
 
 ResourceManager::~ResourceManager() {
-	delete m_staticInstance;
-	m_staticInstance = nullptr;
+	delete &GetInstance();
 	std::unordered_map<std::string, TTF_Font*>::iterator it;
 	while(it != m_fonts.end()){
 		TTF_Font* font = it->second;
@@ -12,7 +11,7 @@ ResourceManager::~ResourceManager() {
 }
 
 ResourceManager& ResourceManager::GetInstance() {
-	m_staticInstance = new ResourceManager;
+	static ResourceManager* m_staticInstance = new ResourceManager;
 	return *m_staticInstance;
 }
 
@@ -28,25 +27,23 @@ SDL_Surface* ResourceManager::GetSurface(std::string sourcePath) {
 	}
 }
 
-TTF_Font* ResourceManager::GetFont(std::string fontFilePath, const int fontSize) {
+TTF_Font* ResourceManager::GetFont(const char* fontFilePath, const int fontSize) {
 	auto search = m_fonts.find(fontFilePath);
 
 	if(search != m_fonts.end()) {
 		return m_fonts[fontFilePath];
 	} else {
-		TTF_Font* font = TTF_OpenFont(fontFilePath.c_str(), fontSize);
+		TTF_Font* font = TTF_OpenFont(fontFilePath, fontSize);
 		m_fonts.insert(std::make_pair(fontFilePath, font));
 		return font;
 	}
 }
 
 ResourceManager::ResourceManager()
-{
-}
+{}
 
 ResourceManager::ResourceManager(const ResourceManager& manager)
-{
-}
+{}
 
 ResourceManager ResourceManager::operator=(const ResourceManager& manager)
 {

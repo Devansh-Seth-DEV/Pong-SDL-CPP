@@ -9,7 +9,9 @@
 
 class TexturedFont {
 public:
-	TexturedFont(SDL_Renderer* renderer, std::string fontFilePath, const int fontSize, std::string label, SDL_Color fg);
+	TexturedFont();
+	TexturedFont(SDL_Renderer* renderer, const char* fontFilePath, const int fontSize, const char* label, SDL_Color& fg);
+	void Label(SDL_Renderer* renderer, const char* fontFilePath, const int fontSize, const char* label, SDL_Color& fg);
 
 	~TexturedFont();
 	static void Quit();
@@ -19,7 +21,7 @@ public:
 	void SetPosY(const int y);
 	void SetWidth(const int w);
 	void SetHeight(const int h);
-	void SetLabel(std::string label);
+	void SetLabel(const char* label);
 	void SetLabelColor(SDL_Color fg);
 
 	int GetPosX() const;
@@ -29,7 +31,7 @@ public:
 	SDL_Color GetLabelColor() const;
 	std::string GetLabel() const;
 
-	void Render(SDL_Renderer* renderer);
+	void Render();
 	void Update();
 
 private:
@@ -37,6 +39,7 @@ private:
 	static ResourceManager& s_resourceManager;
 	SDL_Surface* m_surface;
 	SDL_Texture* m_texture;
+	SDL_Renderer* m_renderer;
 	TTF_Font* m_font;
 	SDL_Rect m_rectangle;
 	std::string m_label;

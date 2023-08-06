@@ -310,7 +310,7 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: \
  /usr/include/X11/../SDL2/SDL_version.h \
  /usr/include/X11/../SDL2/SDL_locale.h \
  /usr/include/X11/../SDL2/SDL_misc.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLAppManager/sdl_app_manager.h \
+ /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.h \
  /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.h \
  /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.h \
  /usr/include/X11/../SDL2/SDL_ttf.h /usr/include/X11/../SDL2/SDL.h \

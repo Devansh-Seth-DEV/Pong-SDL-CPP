@@ -236,6 +236,9 @@ SDL_PRACTICE_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 SDL_PRACTICE_SOURCE_DIR:STATIC=/home/devansh/C_C++/SDL_Learning/Practice
 
+//Dependencies for the target
+texturedFont_LIB_DEPENDS:STATIC=general;SDL2_ttf;general;ResourceManager;
+
 
 ########################
 # INTERNAL cache entries

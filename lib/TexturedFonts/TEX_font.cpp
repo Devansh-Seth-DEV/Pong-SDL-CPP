@@ -3,7 +3,14 @@
 bool TexturedFont::s_initialized = false;
 ResourceManager& TexturedFont::s_resourceManager = ResourceManager::GetInstance();
 
-TexturedFont::TexturedFont(SDL_Renderer* renderer, std::string fontFilePath, const int fontSize, std::string label, SDL_Color fg) {
+TexturedFont::TexturedFont()
+{}
+
+TexturedFont::TexturedFont(SDL_Renderer* renderer, const char* fontFilePath, const int fontSize, const char* label, SDL_Color& fg) {
+	Label(renderer, fontFilePath, fontSize, label, fg);
+}
+
+void TexturedFont::Label(SDL_Renderer* renderer, const char* fontFilePath, const int fontSize, const char* label, SDL_Color& fg) {
 	if(!s_initialized && TTF_Init() < 0) {
 		std::cerr << "TTF fonts initialization error: " << TTF_GetError() << std::endl;
 	} else {
@@ -12,8 +19,9 @@ TexturedFont::TexturedFont(SDL_Renderer* renderer, std::string fontFilePath, con
 	}
 
 	m_font = s_resourceManager.GetFont(fontFilePath, fontSize);
-	m_surface = TTF_RenderText_Solid(m_font, label.c_str(), fg);
+	m_surface = TTF_RenderText_Solid(m_font, label, fg);
 	
+	m_renderer = renderer;
 	m_rectangle.x = 0;
 	m_rectangle.y = 0;
 	m_rectangle.w = 10;
@@ -55,10 +63,10 @@ void TexturedFont::SetHeight(const int h) {
 	m_rectangle.h = h;
 }
 
-void TexturedFont::SetLabel(std::string label) {
+void TexturedFont::SetLabel(const char* label) {
 	SDL_FreeSurface(m_surface);
 
-	m_surface = TTF_RenderText_Solid(m_font, label.c_str(), m_fg);
+	m_surface = TTF_RenderText_Solid(m_font, label, m_fg);
    	SDL_DestroyTexture(m_texture);
 	m_texture = nullptr;
 	m_label = label;
@@ -97,14 +105,13 @@ std::string TexturedFont::GetLabel() const {
 	return m_label;
 }
 
-void TexturedFont::Render(SDL_Renderer* renderer) {
+void TexturedFont::Render() {
 	if(m_texture == nullptr) {
-		m_texture = SDL_CreateTextureFromSurface(renderer, m_surface);
+		m_texture = SDL_CreateTextureFromSurface(m_renderer, m_surface);
 		SDL_FreeSurface(m_surface);
-		m_surface = nullptr;
 	}
 
-	SDL_RenderCopy(renderer, m_texture, nullptr, &m_rectangle);
+	SDL_RenderCopy(m_renderer, m_texture, nullptr, &m_rectangle);
 }
 
 void TexturedFont::Update() {
