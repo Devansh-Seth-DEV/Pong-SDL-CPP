@@ -1,7 +1,7 @@
 lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o: \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.cpp \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer/audio_mixer.cpp \
  /usr/include/stdc-predef.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer/audio_mixer.h \
  /usr/include/X11/../SDL2/SDL.h /usr/include/X11/../SDL2/SDL_main.h \
  /usr/include/X11/../SDL2/SDL_stdinc.h \
  /usr/include/X11/../SDL2/SDL_config.h \

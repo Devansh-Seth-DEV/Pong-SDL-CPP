@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.cpp" "lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o" "gcc" "lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o.d"
+  "/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.cpp" "lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o" "gcc" "lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.cpp" "lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o" "gcc" "lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o.d"
+  "/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.cpp" "lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o" "gcc" "lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

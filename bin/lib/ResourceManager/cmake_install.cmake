@@ -1,4 +1,4 @@
-# Install script for directory: /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager
+# Install script for directory: /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

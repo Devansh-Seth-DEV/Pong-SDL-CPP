@@ -1,7 +1,7 @@
 lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o: \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.cpp \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle/TEX_rect.cpp \
  /usr/include/stdc-predef.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle/TEX_rect.h \
  /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -312,7 +312,7 @@ lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o: \
  /usr/include/X11/../SDL2/SDL_version.h \
  /usr/include/X11/../SDL2/SDL_locale.h \
  /usr/include/X11/../SDL2/SDL_misc.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.h \
  /usr/include/c++/12/unordered_map \
  /usr/include/c++/12/ext/aligned_buffer.h \
  /usr/include/c++/12/bits/hashtable.h \

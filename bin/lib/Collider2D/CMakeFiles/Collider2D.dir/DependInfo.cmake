@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.cpp" "lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o" "gcc" "lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o.d"
+  "/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.cpp" "lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o" "gcc" "lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

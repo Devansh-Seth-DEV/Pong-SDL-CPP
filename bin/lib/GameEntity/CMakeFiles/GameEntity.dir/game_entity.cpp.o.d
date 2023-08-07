@@ -1,7 +1,7 @@
 lib/GameEntity/CMakeFiles/GameEntity.dir/game_entity.cpp.o: \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/GameEntity/game_entity.cpp \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/GameEntity/game_entity.cpp \
  /usr/include/stdc-predef.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/GameEntity/game_entity.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/GameEntity/game_entity.h \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -259,7 +259,7 @@ lib/GameEntity/CMakeFiles/GameEntity.dir/game_entity.cpp.o: \
  /usr/include/X11/../SDL2/SDL_version.h \
  /usr/include/X11/../SDL2/SDL_locale.h \
  /usr/include/X11/../SDL2/SDL_misc.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle/TEX_rect.h \
  /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
  /usr/include/c++/12/ios /usr/include/c++/12/iosfwd \
  /usr/include/c++/12/bits/stringfwd.h /usr/include/c++/12/bits/postypes.h \
@@ -316,7 +316,7 @@ lib/GameEntity/CMakeFiles/GameEntity.dir/game_entity.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.h \
  /usr/include/c++/12/unordered_map \
  /usr/include/c++/12/ext/aligned_buffer.h \
  /usr/include/c++/12/bits/hashtable.h \
@@ -328,4 +328,4 @@ lib/GameEntity/CMakeFiles/GameEntity.dir/game_entity.cpp.o: \
  /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/utility \
  /usr/include/c++/12/bits/stl_relops.h /usr/include/X11/../SDL2/SDL_ttf.h \
  /usr/include/X11/../SDL2/SDL.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.h
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.h

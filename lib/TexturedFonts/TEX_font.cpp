@@ -4,9 +4,12 @@ bool TexturedFont::s_initialized = false;
 ResourceManager& TexturedFont::s_resourceManager = ResourceManager::GetInstance();
 
 TexturedFont::TexturedFont()
+	: m_drawRect(false), m_surface(nullptr), m_texture(nullptr), m_font(nullptr), m_renderer(nullptr)
 {}
 
-TexturedFont::TexturedFont(SDL_Renderer* renderer, const char* fontFilePath, const int fontSize, const char* label, SDL_Color& fg) {
+TexturedFont::TexturedFont(SDL_Renderer* renderer, const char* fontFilePath, const int fontSize, const char* label, SDL_Color& fg)
+	: m_drawRect(false)
+{
 	Label(renderer, fontFilePath, fontSize, label, fg);
 }
 
@@ -81,6 +84,10 @@ void TexturedFont::SetLabelColor(SDL_Color fg) {
 	m_fg = fg;
 }
 
+SDL_Rect& TexturedFont::GetRect() {
+	return m_rectangle;
+}
+
 int TexturedFont::GetPosX() const {
 	return m_rectangle.x;
 }
@@ -111,7 +118,17 @@ void TexturedFont::Render() {
 		SDL_FreeSurface(m_surface);
 	}
 
+	if(m_drawRect) {
+		SDL_SetRenderDrawColor(m_renderer, m_fg.r, m_fg.g, m_fg.g, m_fg.a);
+		SDL_RenderDrawRect(m_renderer, &m_rectangle);
+	}
 	SDL_RenderCopy(m_renderer, m_texture, nullptr, &m_rectangle);
+}
+
+
+void TexturedFont::Render(bool showBorder) {
+	m_drawRect = showBorder;
+	Render();
 }
 
 void TexturedFont::Update() {

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/Practice
+CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/Practice/bin
+CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api/bin
 
 # Include any dependencies generated for this target.
 include lib/AudioMixer/CMakeFiles/AudioMixer.dir/depend.make
@@ -70,18 +70,18 @@ include lib/AudioMixer/CMakeFiles/AudioMixer.dir/progress.make
 include lib/AudioMixer/CMakeFiles/AudioMixer.dir/flags.make
 
 lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o: lib/AudioMixer/CMakeFiles/AudioMixer.dir/flags.make
-lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o: /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.cpp
+lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer/audio_mixer.cpp
 lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o: lib/AudioMixer/CMakeFiles/AudioMixer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o -MF CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o.d -o CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o -c /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/AudioMixer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o -MF CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o.d -o CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o -c /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer/audio_mixer.cpp
 
 lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AudioMixer.dir/audio_mixer.cpp.i"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.cpp > CMakeFiles/AudioMixer.dir/audio_mixer.cpp.i
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/AudioMixer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer/audio_mixer.cpp > CMakeFiles/AudioMixer.dir/audio_mixer.cpp.i
 
 lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AudioMixer.dir/audio_mixer.cpp.s"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.cpp -o CMakeFiles/AudioMixer.dir/audio_mixer.cpp.s
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/AudioMixer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer/audio_mixer.cpp -o CMakeFiles/AudioMixer.dir/audio_mixer.cpp.s
 
 # Object files for target AudioMixer
 AudioMixer_OBJECTS = \
@@ -93,19 +93,19 @@ AudioMixer_EXTERNAL_OBJECTS =
 lib/AudioMixer/libAudioMixer.a: lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o
 lib/AudioMixer/libAudioMixer.a: lib/AudioMixer/CMakeFiles/AudioMixer.dir/build.make
 lib/AudioMixer/libAudioMixer.a: lib/AudioMixer/CMakeFiles/AudioMixer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libAudioMixer.a"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer && $(CMAKE_COMMAND) -P CMakeFiles/AudioMixer.dir/cmake_clean_target.cmake
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AudioMixer.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libAudioMixer.a"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/AudioMixer && $(CMAKE_COMMAND) -P CMakeFiles/AudioMixer.dir/cmake_clean_target.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/AudioMixer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AudioMixer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/AudioMixer/CMakeFiles/AudioMixer.dir/build: lib/AudioMixer/libAudioMixer.a
 .PHONY : lib/AudioMixer/CMakeFiles/AudioMixer.dir/build
 
 lib/AudioMixer/CMakeFiles/AudioMixer.dir/clean:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer && $(CMAKE_COMMAND) -P CMakeFiles/AudioMixer.dir/cmake_clean.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/AudioMixer && $(CMAKE_COMMAND) -P CMakeFiles/AudioMixer.dir/cmake_clean.cmake
 .PHONY : lib/AudioMixer/CMakeFiles/AudioMixer.dir/clean
 
 lib/AudioMixer/CMakeFiles/AudioMixer.dir/depend:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/Practice /home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer /home/devansh/C_C++/SDL_Learning/Practice/bin /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer/CMakeFiles/AudioMixer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/SDL-Api /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer /home/devansh/C_C++/SDL_Learning/SDL-Api/bin /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/AudioMixer /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/AudioMixer/CMakeFiles/AudioMixer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/AudioMixer/CMakeFiles/AudioMixer.dir/depend
 

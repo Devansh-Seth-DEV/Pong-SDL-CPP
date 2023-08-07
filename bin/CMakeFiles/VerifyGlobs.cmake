@@ -3,11 +3,11 @@
 cmake_policy(SET CMP0009 NEW)
 
 # SourceFiles at CMakeLists.txt:5 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/devansh/C_C++/SDL_Learning/Practice/src/*.cpp")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/devansh/C_C++/SDL_Learning/SDL-Api/src/*.cpp")
 set(OLD_GLOB
-  "/home/devansh/C_C++/SDL_Learning/Practice/src/main.cpp"
+  "/home/devansh/C_C++/SDL_Learning/SDL-Api/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles/cmake.verify_globs")
 endif()

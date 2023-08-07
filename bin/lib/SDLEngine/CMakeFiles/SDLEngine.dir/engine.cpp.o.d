@@ -1,7 +1,7 @@
 lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.cpp \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.cpp \
  /usr/include/stdc-predef.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.h \
  /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \

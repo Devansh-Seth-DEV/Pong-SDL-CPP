@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/devansh/C_C++/SDL_Learning/Practice/src/main.cpp" "CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o" "gcc" "CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o.d"
+  "/home/devansh/C_C++/SDL_Learning/SDL-Api/src/main.cpp" "CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o" "gcc" "CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,4 +1,4 @@
-# Install script for directory: /home/devansh/C_C++/SDL_Learning/Practice
+# Install script for directory: /home/devansh/C_C++/SDL_Learning/SDL-Api
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,13 +44,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/cmake_install.cmake")
-  include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine/cmake_install.cmake")
-  include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle/cmake_install.cmake")
-  include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/AudioMixer/cmake_install.cmake")
-  include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts/cmake_install.cmake")
-  include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D/cmake_install.cmake")
-  include("/home/devansh/C_C++/SDL_Learning/Practice/bin/lib/GameEntity/cmake_install.cmake")
+  include("/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/ResourceManager/cmake_install.cmake")
+  include("/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine/cmake_install.cmake")
+  include("/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedRectangle/cmake_install.cmake")
+  include("/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/AudioMixer/cmake_install.cmake")
+  include("/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedFonts/cmake_install.cmake")
+  include("/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/Collider2D/cmake_install.cmake")
+  include("/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/GameEntity/cmake_install.cmake")
 
 endif()
 
@@ -62,5 +62,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/devansh/C_C++/SDL_Learning/Practice/bin/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

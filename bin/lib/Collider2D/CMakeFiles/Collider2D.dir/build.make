@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/Practice
+CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/Practice/bin
+CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api/bin
 
 # Include any dependencies generated for this target.
 include lib/Collider2D/CMakeFiles/Collider2D.dir/depend.make
@@ -70,18 +70,18 @@ include lib/Collider2D/CMakeFiles/Collider2D.dir/progress.make
 include lib/Collider2D/CMakeFiles/Collider2D.dir/flags.make
 
 lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o: lib/Collider2D/CMakeFiles/Collider2D.dir/flags.make
-lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o: /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.cpp
+lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.cpp
 lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o: lib/Collider2D/CMakeFiles/Collider2D.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o -MF CMakeFiles/Collider2D.dir/collider2d.cpp.o.d -o CMakeFiles/Collider2D.dir/collider2d.cpp.o -c /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/Collider2D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o -MF CMakeFiles/Collider2D.dir/collider2d.cpp.o.d -o CMakeFiles/Collider2D.dir/collider2d.cpp.o -c /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.cpp
 
 lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Collider2D.dir/collider2d.cpp.i"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.cpp > CMakeFiles/Collider2D.dir/collider2d.cpp.i
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/Collider2D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.cpp > CMakeFiles/Collider2D.dir/collider2d.cpp.i
 
 lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Collider2D.dir/collider2d.cpp.s"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.cpp -o CMakeFiles/Collider2D.dir/collider2d.cpp.s
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/Collider2D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.cpp -o CMakeFiles/Collider2D.dir/collider2d.cpp.s
 
 # Object files for target Collider2D
 Collider2D_OBJECTS = \
@@ -93,19 +93,19 @@ Collider2D_EXTERNAL_OBJECTS =
 lib/Collider2D/libCollider2D.a: lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o
 lib/Collider2D/libCollider2D.a: lib/Collider2D/CMakeFiles/Collider2D.dir/build.make
 lib/Collider2D/libCollider2D.a: lib/Collider2D/CMakeFiles/Collider2D.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libCollider2D.a"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D && $(CMAKE_COMMAND) -P CMakeFiles/Collider2D.dir/cmake_clean_target.cmake
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Collider2D.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libCollider2D.a"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/Collider2D && $(CMAKE_COMMAND) -P CMakeFiles/Collider2D.dir/cmake_clean_target.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/Collider2D && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Collider2D.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/Collider2D/CMakeFiles/Collider2D.dir/build: lib/Collider2D/libCollider2D.a
 .PHONY : lib/Collider2D/CMakeFiles/Collider2D.dir/build
 
 lib/Collider2D/CMakeFiles/Collider2D.dir/clean:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D && $(CMAKE_COMMAND) -P CMakeFiles/Collider2D.dir/cmake_clean.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/Collider2D && $(CMAKE_COMMAND) -P CMakeFiles/Collider2D.dir/cmake_clean.cmake
 .PHONY : lib/Collider2D/CMakeFiles/Collider2D.dir/clean
 
 lib/Collider2D/CMakeFiles/Collider2D.dir/depend:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/Practice /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D /home/devansh/C_C++/SDL_Learning/Practice/bin /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/Collider2D/CMakeFiles/Collider2D.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/SDL-Api /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D /home/devansh/C_C++/SDL_Learning/SDL-Api/bin /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/Collider2D /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/Collider2D/CMakeFiles/Collider2D.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/Collider2D/CMakeFiles/Collider2D.dir/depend
 

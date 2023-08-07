@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer/audio_mixer.cpp" "lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o" "gcc" "lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o.d"
+  "/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer/audio_mixer.cpp" "lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o" "gcc" "lib/AudioMixer/CMakeFiles/AudioMixer.dir/audio_mixer.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

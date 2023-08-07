@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/Practice
+CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/Practice/bin
+CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api/bin
 
 # Include any dependencies generated for this target.
 include lib/TexturedFonts/CMakeFiles/texturedFont.dir/depend.make
@@ -70,18 +70,18 @@ include lib/TexturedFonts/CMakeFiles/texturedFont.dir/progress.make
 include lib/TexturedFonts/CMakeFiles/texturedFont.dir/flags.make
 
 lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o: lib/TexturedFonts/CMakeFiles/texturedFont.dir/flags.make
-lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o: /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.cpp
+lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.cpp
 lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o: lib/TexturedFonts/CMakeFiles/texturedFont.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o -MF CMakeFiles/texturedFont.dir/TEX_font.cpp.o.d -o CMakeFiles/texturedFont.dir/TEX_font.cpp.o -c /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedFonts && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o -MF CMakeFiles/texturedFont.dir/TEX_font.cpp.o.d -o CMakeFiles/texturedFont.dir/TEX_font.cpp.o -c /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.cpp
 
 lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/texturedFont.dir/TEX_font.cpp.i"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.cpp > CMakeFiles/texturedFont.dir/TEX_font.cpp.i
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedFonts && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.cpp > CMakeFiles/texturedFont.dir/TEX_font.cpp.i
 
 lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/texturedFont.dir/TEX_font.cpp.s"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.cpp -o CMakeFiles/texturedFont.dir/TEX_font.cpp.s
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedFonts && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.cpp -o CMakeFiles/texturedFont.dir/TEX_font.cpp.s
 
 # Object files for target texturedFont
 texturedFont_OBJECTS = \
@@ -93,19 +93,19 @@ texturedFont_EXTERNAL_OBJECTS =
 lib/TexturedFonts/libtexturedFont.a: lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o
 lib/TexturedFonts/libtexturedFont.a: lib/TexturedFonts/CMakeFiles/texturedFont.dir/build.make
 lib/TexturedFonts/libtexturedFont.a: lib/TexturedFonts/CMakeFiles/texturedFont.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtexturedFont.a"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts && $(CMAKE_COMMAND) -P CMakeFiles/texturedFont.dir/cmake_clean_target.cmake
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/texturedFont.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtexturedFont.a"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedFonts && $(CMAKE_COMMAND) -P CMakeFiles/texturedFont.dir/cmake_clean_target.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedFonts && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/texturedFont.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/TexturedFonts/CMakeFiles/texturedFont.dir/build: lib/TexturedFonts/libtexturedFont.a
 .PHONY : lib/TexturedFonts/CMakeFiles/texturedFont.dir/build
 
 lib/TexturedFonts/CMakeFiles/texturedFont.dir/clean:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts && $(CMAKE_COMMAND) -P CMakeFiles/texturedFont.dir/cmake_clean.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedFonts && $(CMAKE_COMMAND) -P CMakeFiles/texturedFont.dir/cmake_clean.cmake
 .PHONY : lib/TexturedFonts/CMakeFiles/texturedFont.dir/clean
 
 lib/TexturedFonts/CMakeFiles/texturedFont.dir/depend:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/Practice /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts /home/devansh/C_C++/SDL_Learning/Practice/bin /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedFonts/CMakeFiles/texturedFont.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/SDL-Api /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts /home/devansh/C_C++/SDL_Learning/SDL-Api/bin /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedFonts /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedFonts/CMakeFiles/texturedFont.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/TexturedFonts/CMakeFiles/texturedFont.dir/depend
 

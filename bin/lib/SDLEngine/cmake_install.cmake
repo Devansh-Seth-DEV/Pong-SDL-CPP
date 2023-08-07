@@ -1,4 +1,4 @@
-# Install script for directory: /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine
+# Install script for directory: /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

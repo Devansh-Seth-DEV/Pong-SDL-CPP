@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/Practice
+CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/Practice/bin
+CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api/bin
 
 # Include any dependencies generated for this target.
 include lib/ResourceManager/CMakeFiles/ResourceManager.dir/depend.make
@@ -70,18 +70,18 @@ include lib/ResourceManager/CMakeFiles/ResourceManager.dir/progress.make
 include lib/ResourceManager/CMakeFiles/ResourceManager.dir/flags.make
 
 lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o: lib/ResourceManager/CMakeFiles/ResourceManager.dir/flags.make
-lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o: /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.cpp
+lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.cpp
 lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o: lib/ResourceManager/CMakeFiles/ResourceManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o -MF CMakeFiles/ResourceManager.dir/manager.cpp.o.d -o CMakeFiles/ResourceManager.dir/manager.cpp.o -c /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/ResourceManager && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o -MF CMakeFiles/ResourceManager.dir/manager.cpp.o.d -o CMakeFiles/ResourceManager.dir/manager.cpp.o -c /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.cpp
 
 lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ResourceManager.dir/manager.cpp.i"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.cpp > CMakeFiles/ResourceManager.dir/manager.cpp.i
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/ResourceManager && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.cpp > CMakeFiles/ResourceManager.dir/manager.cpp.i
 
 lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ResourceManager.dir/manager.cpp.s"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.cpp -o CMakeFiles/ResourceManager.dir/manager.cpp.s
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/ResourceManager && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.cpp -o CMakeFiles/ResourceManager.dir/manager.cpp.s
 
 # Object files for target ResourceManager
 ResourceManager_OBJECTS = \
@@ -93,19 +93,19 @@ ResourceManager_EXTERNAL_OBJECTS =
 lib/ResourceManager/libResourceManager.a: lib/ResourceManager/CMakeFiles/ResourceManager.dir/manager.cpp.o
 lib/ResourceManager/libResourceManager.a: lib/ResourceManager/CMakeFiles/ResourceManager.dir/build.make
 lib/ResourceManager/libResourceManager.a: lib/ResourceManager/CMakeFiles/ResourceManager.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libResourceManager.a"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager && $(CMAKE_COMMAND) -P CMakeFiles/ResourceManager.dir/cmake_clean_target.cmake
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ResourceManager.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libResourceManager.a"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/ResourceManager && $(CMAKE_COMMAND) -P CMakeFiles/ResourceManager.dir/cmake_clean_target.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/ResourceManager && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ResourceManager.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/ResourceManager/CMakeFiles/ResourceManager.dir/build: lib/ResourceManager/libResourceManager.a
 .PHONY : lib/ResourceManager/CMakeFiles/ResourceManager.dir/build
 
 lib/ResourceManager/CMakeFiles/ResourceManager.dir/clean:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager && $(CMAKE_COMMAND) -P CMakeFiles/ResourceManager.dir/cmake_clean.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/ResourceManager && $(CMAKE_COMMAND) -P CMakeFiles/ResourceManager.dir/cmake_clean.cmake
 .PHONY : lib/ResourceManager/CMakeFiles/ResourceManager.dir/clean
 
 lib/ResourceManager/CMakeFiles/ResourceManager.dir/depend:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/Practice /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager /home/devansh/C_C++/SDL_Learning/Practice/bin /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/ResourceManager/CMakeFiles/ResourceManager.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/SDL-Api /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager /home/devansh/C_C++/SDL_Learning/SDL-Api/bin /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/ResourceManager /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/ResourceManager/CMakeFiles/ResourceManager.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/ResourceManager/CMakeFiles/ResourceManager.dir/depend
 

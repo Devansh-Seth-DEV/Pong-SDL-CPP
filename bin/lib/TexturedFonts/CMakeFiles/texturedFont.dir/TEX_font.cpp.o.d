@@ -1,7 +1,7 @@
 lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o: \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.cpp \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.cpp \
  /usr/include/stdc-predef.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.h \
  /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -313,7 +313,7 @@ lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o: \
  /usr/include/X11/../SDL2/SDL_locale.h \
  /usr/include/X11/../SDL2/SDL_misc.h /usr/include/X11/../SDL2/SDL_ttf.h \
  /usr/include/X11/../SDL2/SDL.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager/manager.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.h \
  /usr/include/c++/12/unordered_map \
  /usr/include/c++/12/ext/aligned_buffer.h \
  /usr/include/c++/12/bits/hashtable.h \

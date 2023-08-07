@@ -24,6 +24,7 @@ public:
 	void SetLabel(const char* label);
 	void SetLabelColor(SDL_Color fg);
 
+	SDL_Rect& GetRect();
 	int GetPosX() const;
 	int GetPosY() const;
 	int GetWidth() const;
@@ -32,6 +33,7 @@ public:
 	std::string GetLabel() const;
 
 	void Render();
+	void Render(bool showBorder);
 	void Update();
 
 private:
@@ -44,6 +46,7 @@ private:
 	SDL_Rect m_rectangle;
 	std::string m_label;
 	SDL_Color m_fg;
+	bool m_drawRect;
 };
 
 #endif /* TEX_font.h */

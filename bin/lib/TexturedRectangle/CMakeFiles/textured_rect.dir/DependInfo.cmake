@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.cpp" "lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o" "gcc" "lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o.d"
+  "/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle/TEX_rect.cpp" "lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o" "gcc" "lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/Practice
+CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/Practice/bin
+CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api/bin
 
 # Include any dependencies generated for this target.
 include lib/SDLEngine/CMakeFiles/SDLEngine.dir/depend.make
@@ -70,18 +70,18 @@ include lib/SDLEngine/CMakeFiles/SDLEngine.dir/progress.make
 include lib/SDLEngine/CMakeFiles/SDLEngine.dir/flags.make
 
 lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: lib/SDLEngine/CMakeFiles/SDLEngine.dir/flags.make
-lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.cpp
+lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.cpp
 lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: lib/SDLEngine/CMakeFiles/SDLEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o -MF CMakeFiles/SDLEngine.dir/engine.cpp.o.d -o CMakeFiles/SDLEngine.dir/engine.cpp.o -c /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o -MF CMakeFiles/SDLEngine.dir/engine.cpp.o.d -o CMakeFiles/SDLEngine.dir/engine.cpp.o -c /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.cpp
 
 lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SDLEngine.dir/engine.cpp.i"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.cpp > CMakeFiles/SDLEngine.dir/engine.cpp.i
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.cpp > CMakeFiles/SDLEngine.dir/engine.cpp.i
 
 lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SDLEngine.dir/engine.cpp.s"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine/engine.cpp -o CMakeFiles/SDLEngine.dir/engine.cpp.s
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.cpp -o CMakeFiles/SDLEngine.dir/engine.cpp.s
 
 # Object files for target SDLEngine
 SDLEngine_OBJECTS = \
@@ -93,19 +93,19 @@ SDLEngine_EXTERNAL_OBJECTS =
 lib/SDLEngine/libSDLEngine.a: lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o
 lib/SDLEngine/libSDLEngine.a: lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make
 lib/SDLEngine/libSDLEngine.a: lib/SDLEngine/CMakeFiles/SDLEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libSDLEngine.a"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine && $(CMAKE_COMMAND) -P CMakeFiles/SDLEngine.dir/cmake_clean_target.cmake
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDLEngine.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libSDLEngine.a"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine && $(CMAKE_COMMAND) -P CMakeFiles/SDLEngine.dir/cmake_clean_target.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDLEngine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/SDLEngine/CMakeFiles/SDLEngine.dir/build: lib/SDLEngine/libSDLEngine.a
 .PHONY : lib/SDLEngine/CMakeFiles/SDLEngine.dir/build
 
 lib/SDLEngine/CMakeFiles/SDLEngine.dir/clean:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine && $(CMAKE_COMMAND) -P CMakeFiles/SDLEngine.dir/cmake_clean.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine && $(CMAKE_COMMAND) -P CMakeFiles/SDLEngine.dir/cmake_clean.cmake
 .PHONY : lib/SDLEngine/CMakeFiles/SDLEngine.dir/clean
 
 lib/SDLEngine/CMakeFiles/SDLEngine.dir/depend:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/Practice /home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine /home/devansh/C_C++/SDL_Learning/Practice/bin /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine/CMakeFiles/SDLEngine.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/SDL-Api /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine /home/devansh/C_C++/SDL_Learning/SDL-Api/bin /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine/CMakeFiles/SDLEngine.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/SDLEngine/CMakeFiles/SDLEngine.dir/depend
 

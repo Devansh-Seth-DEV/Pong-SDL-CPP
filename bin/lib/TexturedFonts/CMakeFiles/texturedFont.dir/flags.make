@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/X11/../SDL2 -I/home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager
+CXX_INCLUDES = -I/usr/include/X11/../SDL2 -I/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager
 
 CXX_FLAGS = 
 

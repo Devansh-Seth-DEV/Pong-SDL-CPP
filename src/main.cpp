@@ -36,7 +36,7 @@ int main() {
 	renderer = app.GetRenderer();
 	
 	label.Label(renderer, fontPath, 32, text, textfg);
-	label.SetRect(app.GetWidth()/2-100, app.GetHeight()/2-50-32, 200, 100);
+	label.SetRect(app.GetWidth()/2-150, app.GetHeight()/2-50-32, 300, 100);
 
 	app.SetEventCallback(HandleEvent);
 	app.SetRenderCallback(HandleRender);

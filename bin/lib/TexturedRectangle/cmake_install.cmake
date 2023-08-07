@@ -1,4 +1,4 @@
-# Install script for directory: /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle
+# Install script for directory: /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

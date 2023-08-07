@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/Practice
+CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/Practice/bin
+CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api/bin
 
 # Utility rule file for deps.
 
@@ -67,8 +67,8 @@ include CMakeFiles/deps.dir/compiler_depend.make
 include CMakeFiles/deps.dir/progress.make
 
 CMakeFiles/deps:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Creating dependencies"
-	/usr/bin/cmake -E copy_directory /home/devansh/C_C++/SDL_Learning/Practice/assets /home/devansh/C_C++/SDL_Learning/Practice/bin/assets
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Creating dependencies"
+	/usr/bin/cmake -E copy_directory /home/devansh/C_C++/SDL_Learning/SDL-Api/assets /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/assets
 
 deps: CMakeFiles/deps
 deps: CMakeFiles/deps.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/deps.dir/clean:
 .PHONY : CMakeFiles/deps.dir/clean
 
 CMakeFiles/deps.dir/depend:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/Practice /home/devansh/C_C++/SDL_Learning/Practice /home/devansh/C_C++/SDL_Learning/Practice/bin /home/devansh/C_C++/SDL_Learning/Practice/bin /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/deps.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/SDL-Api /home/devansh/C_C++/SDL_Learning/SDL-Api /home/devansh/C_C++/SDL_Learning/SDL-Api/bin /home/devansh/C_C++/SDL_Learning/SDL-Api/bin /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles/deps.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/deps.dir/depend
 

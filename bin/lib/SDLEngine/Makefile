@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/Practice
+CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/Practice/bin
+CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/SDLEngine//CMakeFiles/progress.marks
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles 0
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/SDLEngine//CMakeFiles/progress.marks
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/clean
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,23 +103,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/preinstall
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/preinstall
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -P /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/VerifyGlobs.cmake
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -P /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles/VerifyGlobs.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/SDLEngine/CMakeFiles/SDLEngine.dir/rule:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/CMakeFiles/SDLEngine.dir/rule
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SDLEngine/CMakeFiles/SDLEngine.dir/rule
 .PHONY : lib/SDLEngine/CMakeFiles/SDLEngine.dir/rule
 
 # Convenience name for target.
@@ -128,7 +128,7 @@ SDLEngine: lib/SDLEngine/CMakeFiles/SDLEngine.dir/rule
 
 # fast build rule for target.
 SDLEngine/fast:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/build
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/build
 .PHONY : SDLEngine/fast
 
 engine.o: engine.cpp.o
@@ -136,7 +136,7 @@ engine.o: engine.cpp.o
 
 # target to build an object file
 engine.cpp.o:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o
 .PHONY : engine.cpp.o
 
 engine.i: engine.cpp.i
@@ -144,7 +144,7 @@ engine.i: engine.cpp.i
 
 # target to preprocess a source file
 engine.cpp.i:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.i
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.i
 .PHONY : engine.cpp.i
 
 engine.s: engine.cpp.s
@@ -152,7 +152,7 @@ engine.s: engine.cpp.s
 
 # target to generate assembly for a file
 engine.cpp.s:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.s
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(MAKE) $(MAKESILENT) -f lib/SDLEngine/CMakeFiles/SDLEngine.dir/build.make lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.s
 .PHONY : engine.cpp.s
 
 # Help Target
@@ -178,7 +178,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -P /home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles/VerifyGlobs.cmake
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -P /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles/VerifyGlobs.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

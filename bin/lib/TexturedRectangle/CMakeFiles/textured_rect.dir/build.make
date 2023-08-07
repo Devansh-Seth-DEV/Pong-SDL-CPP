@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/Practice
+CMAKE_SOURCE_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/Practice/bin
+CMAKE_BINARY_DIR = /home/devansh/C_C++/SDL_Learning/SDL-Api/bin
 
 # Include any dependencies generated for this target.
 include lib/TexturedRectangle/CMakeFiles/textured_rect.dir/depend.make
@@ -70,18 +70,18 @@ include lib/TexturedRectangle/CMakeFiles/textured_rect.dir/progress.make
 include lib/TexturedRectangle/CMakeFiles/textured_rect.dir/flags.make
 
 lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o: lib/TexturedRectangle/CMakeFiles/textured_rect.dir/flags.make
-lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o: /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.cpp
+lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle/TEX_rect.cpp
 lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o: lib/TexturedRectangle/CMakeFiles/textured_rect.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o -MF CMakeFiles/textured_rect.dir/TEX_rect.cpp.o.d -o CMakeFiles/textured_rect.dir/TEX_rect.cpp.o -c /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedRectangle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o -MF CMakeFiles/textured_rect.dir/TEX_rect.cpp.o.d -o CMakeFiles/textured_rect.dir/TEX_rect.cpp.o -c /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle/TEX_rect.cpp
 
 lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/textured_rect.dir/TEX_rect.cpp.i"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.cpp > CMakeFiles/textured_rect.dir/TEX_rect.cpp.i
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedRectangle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle/TEX_rect.cpp > CMakeFiles/textured_rect.dir/TEX_rect.cpp.i
 
 lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/textured_rect.dir/TEX_rect.cpp.s"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle/TEX_rect.cpp -o CMakeFiles/textured_rect.dir/TEX_rect.cpp.s
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedRectangle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle/TEX_rect.cpp -o CMakeFiles/textured_rect.dir/TEX_rect.cpp.s
 
 # Object files for target textured_rect
 textured_rect_OBJECTS = \
@@ -93,19 +93,19 @@ textured_rect_EXTERNAL_OBJECTS =
 lib/TexturedRectangle/libtextured_rect.a: lib/TexturedRectangle/CMakeFiles/textured_rect.dir/TEX_rect.cpp.o
 lib/TexturedRectangle/libtextured_rect.a: lib/TexturedRectangle/CMakeFiles/textured_rect.dir/build.make
 lib/TexturedRectangle/libtextured_rect.a: lib/TexturedRectangle/CMakeFiles/textured_rect.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/Practice/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtextured_rect.a"
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle && $(CMAKE_COMMAND) -P CMakeFiles/textured_rect.dir/cmake_clean_target.cmake
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/textured_rect.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtextured_rect.a"
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedRectangle && $(CMAKE_COMMAND) -P CMakeFiles/textured_rect.dir/cmake_clean_target.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedRectangle && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/textured_rect.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/TexturedRectangle/CMakeFiles/textured_rect.dir/build: lib/TexturedRectangle/libtextured_rect.a
 .PHONY : lib/TexturedRectangle/CMakeFiles/textured_rect.dir/build
 
 lib/TexturedRectangle/CMakeFiles/textured_rect.dir/clean:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle && $(CMAKE_COMMAND) -P CMakeFiles/textured_rect.dir/cmake_clean.cmake
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedRectangle && $(CMAKE_COMMAND) -P CMakeFiles/textured_rect.dir/cmake_clean.cmake
 .PHONY : lib/TexturedRectangle/CMakeFiles/textured_rect.dir/clean
 
 lib/TexturedRectangle/CMakeFiles/textured_rect.dir/depend:
-	cd /home/devansh/C_C++/SDL_Learning/Practice/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/Practice /home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle /home/devansh/C_C++/SDL_Learning/Practice/bin /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle /home/devansh/C_C++/SDL_Learning/Practice/bin/lib/TexturedRectangle/CMakeFiles/textured_rect.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/devansh/C_C++/SDL_Learning/SDL-Api/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devansh/C_C++/SDL_Learning/SDL-Api /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle /home/devansh/C_C++/SDL_Learning/SDL-Api/bin /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedRectangle /home/devansh/C_C++/SDL_Learning/SDL-Api/bin/lib/TexturedRectangle/CMakeFiles/textured_rect.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/TexturedRectangle/CMakeFiles/textured_rect.dir/depend
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/X11/../SDL2 -I/home/devansh/C_C++/SDL_Learning/Practice/bin -I/home/devansh/C_C++/SDL_Learning/Practice/include -I/home/devansh/C_C++/SDL_Learning/Practice/lib/ResourceManager -I/home/devansh/C_C++/SDL_Learning/Practice/lib/SDLEngine -I/home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedRectangle -I/home/devansh/C_C++/SDL_Learning/Practice/lib/AudioMixer -I/home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts -I/home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D -I/home/devansh/C_C++/SDL_Learning/Practice/lib/GameEntity
+CXX_INCLUDES = -I/usr/include/X11/../SDL2 -I/home/devansh/C_C++/SDL_Learning/SDL-Api/bin -I/home/devansh/C_C++/SDL_Learning/SDL-Api/include -I/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager -I/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine -I/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle -I/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer -I/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts -I/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D -I/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/GameEntity
 
 CXX_FLAGS = 
 

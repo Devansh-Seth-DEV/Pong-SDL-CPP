@@ -1,7 +1,7 @@
 lib/Collider2D/CMakeFiles/Collider2D.dir/collider2d.cpp.o: \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.cpp \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.cpp \
  /usr/include/stdc-predef.h \
- /home/devansh/C_C++/SDL_Learning/Practice/lib/Collider2D/collider2d.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.h \
  /usr/include/X11/../SDL2/SDL.h /usr/include/X11/../SDL2/SDL_main.h \
  /usr/include/X11/../SDL2/SDL_stdinc.h \
  /usr/include/X11/../SDL2/SDL_config.h \

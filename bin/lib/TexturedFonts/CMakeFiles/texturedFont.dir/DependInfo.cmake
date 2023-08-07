@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/devansh/C_C++/SDL_Learning/Practice/lib/TexturedFonts/TEX_font.cpp" "lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o" "gcc" "lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o.d"
+  "/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.cpp" "lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o" "gcc" "lib/TexturedFonts/CMakeFiles/texturedFont.dir/TEX_font.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
