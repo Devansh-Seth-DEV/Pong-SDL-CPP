@@ -2,9 +2,10 @@ cmake_minimum_required(VERSION 3.2)
 
 project(SDL_PRACTICE VERSION 1.0)
 
-file(GLOB SourceFiles CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/src/*.cpp)
+#[[ file(GLOB SourceFiles CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/src/*.cpp)
+]]
 
-add_executable(${PROJECT_NAME} ${SourceFiles})
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/lib/ResourceManager)
 add_subdirectory(${PROJECT_SOURCE_DIR}/lib/SDLEngine)

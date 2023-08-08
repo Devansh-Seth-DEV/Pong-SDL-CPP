@@ -15,8 +15,8 @@ struct RGB_ColorChannel {
 class SDLApp {
 public:
 	SDLApp();
-	SDLApp(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, int renderIndex, Uint32 renderFlags);
-	void App(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, int renderIndex, Uint32 renderFlags);
+	SDLApp(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, Uint32 winInitFlags, int renderIndex, Uint32 renderFlags);
+	void App(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, Uint32 winInitFlags, int renderIndex, Uint32 renderFlags);
 	
 	~SDLApp();
 

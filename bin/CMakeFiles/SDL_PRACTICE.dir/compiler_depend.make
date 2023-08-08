@@ -184,6 +184,7 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
+  /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_main.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -355,8 +356,6 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/SDL_locale.h \
   /usr/include/SDL2/SDL_misc.h \
-  /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.h \
-  /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer/audio_mixer.h \
   /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.h \
   /usr/include/SDL2/SDL_ttf.h \
   /usr/include/SDL2/SDL.h \
@@ -380,7 +379,8 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL
   /usr/include/c++/12/bits/stl_bvector.h \
   /usr/include/c++/12/bits/vector.tcc \
   /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedRectangle/TEX_rect.h \
-  /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.h
+  /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.h \
+  /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/AudioMixer/audio_mixer.h
 
 
 /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/Collider2D/collider2d.h:
@@ -515,10 +515,6 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/xsaveintrin.h:
 
-/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/waitpkgintrin.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/12/include/uintrintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/tsxldtrkintrin.h:
@@ -526,6 +522,8 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL
 /usr/include/c++/12/bits/unordered_map.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/tbmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/sgxintrin.h:
 
 /usr/include/c++/12/bits/basic_string.h:
 
@@ -564,8 +562,6 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512bf16intrin.h:
 
 /usr/include/c++/12/bits/allocator.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/sgxintrin.h:
 
 /usr/include/c++/12/bits/ostream_insert.h:
 
@@ -1015,6 +1011,12 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL
 
 /usr/include/c++/12/bits/streambuf_iterator.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/12/include/waitpkgintrin.h:
+
+/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/SDLEngine/engine.h:
+
+/usr/include/SDL2/SDL_atomic.h:
+
 /usr/include/SDL2/SDL.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
@@ -1096,8 +1098,6 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: /home/devansh/C_C++/SDL_Learning/SDL
 /usr/include/c++/12/bits/basic_ios.tcc:
 
 /usr/include/c++/12/tr1/riemann_zeta.tcc:
-
-/usr/include/SDL2/SDL_atomic.h:
 
 /usr/include/SDL2/SDL_endian.h:
 

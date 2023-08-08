@@ -1,15 +1,14 @@
 #include "game_entity.h"
 
 Entity::Entity()
-	: m_sprite(nullptr), m_renderer(nullptr), m_updateCallback(nullptr)
+	: m_renderer(nullptr), m_updateCallback(nullptr)
 {}
 
 Entity::Entity(SDL_Renderer* renderer)
-	: m_sprite(nullptr), m_renderer(renderer), m_updateCallback(nullptr)
+	: m_renderer(renderer), m_updateCallback(nullptr)
 {}
 
 Entity::~Entity() {
-	delete m_sprite;
 	for(int i=0; i<m_colliders.size(); i++) {
 		delete m_colliders[i];
 	}
@@ -24,7 +23,7 @@ void Entity::Update() {
 }
 
 void Entity::SpriteUpdate() {
-	m_sprite->Update();
+	m_sprite.Update();
 }
 
 void Entity::ColliderUpdate() {
@@ -38,19 +37,14 @@ void Entity::ColliderUpdate(const int index) {
 }
 
 void Entity::Render() {
-	if(m_sprite != nullptr) {
-		m_sprite->Render(m_renderer);
-	}
-
+	m_sprite.Render(m_renderer);
 	for(int i=0; i<m_colliders.size(); i++) {
 		m_colliders[i]->Render(m_renderer);
 	}
 }
 
 void Entity::RenderSprite() {
-	if(m_sprite != nullptr) {
-		m_sprite->Render(m_renderer);
-	}
+	m_sprite.Render(m_renderer);
 }
 
 void Entity::RenderCollider() {
@@ -63,6 +57,7 @@ void Entity::RenderCollider(const int index) {
 	if(m_colliders.size() > 0) {
 		m_colliders[index]->Render(m_renderer);
 	}
+	ResourceManager::GetInstance().~ResourceManager();
 }
 
 void Entity::AddRenderer(SDL_Renderer* renderer) {
@@ -70,23 +65,13 @@ void Entity::AddRenderer(SDL_Renderer* renderer) {
 }
 
 void Entity::AddSprite(const char* spritePath) {
-	if(m_sprite == nullptr) {
-		m_sprite = new TexturedRect(m_renderer, spritePath);
-	} else {
-		delete m_sprite;
-		m_sprite = new TexturedRect(m_renderer, spritePath);
-	}
-	m_sprite->SetRect(0, 0, 0, 0);
+	m_sprite = TexturedRect(m_renderer, spritePath);
+	m_sprite.SetRect(0, 0, 0, 0);
 }
 
 void Entity::AddSprite(const char* spritePath, SDL_Color key) {
-	if(m_sprite == nullptr) {
-		m_sprite = new TexturedRect(m_renderer, spritePath, key);
-	} else {
-		delete m_sprite;
-		m_sprite = new TexturedRect(m_renderer, spritePath, key);
-	}
-	m_sprite->SetRect(0, 0, 0, 0);
+	m_sprite = TexturedRect(m_renderer, spritePath, key);
+	m_sprite.SetRect(0, 0, 0, 0);
 }
 
 void Entity::AddCollider2D() {
@@ -116,28 +101,36 @@ SDL_bool Entity::IsColliding(const Entity& obj) {
 	return flag;
 }
 
+void Entity::SetRect(const int x, const int y, const int w, const int h) {
+	m_sprite.SetRect(x, y, w, h);
+}
+
+void Entity::SetRect(SDL_Rect& rect) {
+	m_sprite.SetRect(rect);
+}
+
 void Entity::SetPosition(const int x, const int y) {
-	m_sprite->SetPosition(x, y);
+	m_sprite.SetPosition(x, y);
 }
 
 void Entity::SetPosX(const int x) {
-	m_sprite->SetPosX(x);
+	m_sprite.SetPosX(x);
 }
 
 void Entity::SetPosY(const int y) {
-	m_sprite->SetPosY(y);
+	m_sprite.SetPosY(y);
 }
 
 void Entity::SetDimention(const int w, const int h) {
-	m_sprite->SetDimention(w, h);
+	m_sprite.SetDimention(w, h);
 }
 
 void Entity::SetWidth(const int w) {
-	m_sprite->SetWidth(w);
+	m_sprite.SetWidth(w);
 }
 
 void Entity::SetHeight(const int h) {
-	m_sprite->SetHeight(h);
+	m_sprite.SetHeight(h);
 }
 
 void Entity::SetPosition(const int index, const int x, const int y) {
@@ -179,7 +172,7 @@ void Entity::SetUpdateCallback(void (*updateCallback)(void)) {
 }
 
 void Entity::SetSpriteUpdateCallback(void (*updateCallback)(void)) {
-	m_sprite->SetUpdateCallback(updateCallback);
+	m_sprite.SetUpdateCallback(updateCallback);
 }
 
 void Entity::SetColliderUpdateCallback(void (*updateCallback)(void)) {
@@ -192,20 +185,24 @@ void Entity::SetColliderUpdateCallback(const int index, void (*updateCallback)(v
 	m_colliders[index]->SetUpdateCallback(updateCallback);
 }
 
+SDL_Rect& Entity::GetRect() {
+	return m_sprite.GetRect();
+}
+
 int Entity::GetPosX() const {
-	return m_sprite->GetPosX();
+	return m_sprite.GetPosX();
 }
 
 int Entity::GetPosY() const {
-	return m_sprite->GetPosY();
+	return m_sprite.GetPosY();
 }
 
 int Entity::GetWidth() const {
-	return m_sprite->GetWidth();
+	return m_sprite.GetWidth();
 }
 
 int Entity::GetHeight() const {
-	return m_sprite->GetHeight();
+	return m_sprite.GetHeight();
 }
 
 Collider& Entity::GetCollider(const int index) const {

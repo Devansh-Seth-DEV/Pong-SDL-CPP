@@ -9,6 +9,7 @@ public:
 	~Collider();
 
 	void SetRect(const int x, const int y, const int w, const int h);
+	void SetRect(const SDL_Rect& rect);
 	void SetPosition(const int x, const int y);
 	void SetPosX(const int x);
 	void SetPosY(const int y);

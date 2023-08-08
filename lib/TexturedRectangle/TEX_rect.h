@@ -9,12 +9,14 @@
 
 class TexturedRect {
 public:
+	TexturedRect();
 	TexturedRect(SDL_Renderer* renderer, const char* sourcePath);
 	TexturedRect(SDL_Renderer* renderer, const char* sourcePath, SDL_Color key);
 
 	~TexturedRect();
 
 	void SetRect(const int x, const int y, const int w, const int h);
+	void SetRect(const SDL_Rect& rect);
 	void SetPosition(const int x, const int y);
 	void SetDimention(const int w, const int h);
 	void SetWidth(const int w);
@@ -27,7 +29,7 @@ public:
 	int GetPosY() const;
 	int GetWidth() const;
 	int GetHeight() const;
-	SDL_Rect GetRect() const;
+	SDL_Rect& GetRect();
 
 	void Update();
 	void Render(SDL_Renderer* renderer);

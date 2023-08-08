@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Dependencies for the target
+AudioMixer_LIB_DEPENDS:STATIC=general;SDL2;general;SDL2_mixer;
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -227,6 +230,15 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Dependencies for the target
+GameEntity_LIB_DEPENDS:STATIC=general;ResourceManager;general;textured_rect;general;Collider2D;
+
+//Dependencies for the target
+ResourceManager_LIB_DEPENDS:STATIC=general;SDL2;general;SDL2_ttf;
+
+//Dependencies for the target
+SDLEngine_LIB_DEPENDS:STATIC=general;SDL2;
+
 //Value Computed by CMake
 SDL_PRACTICE_BINARY_DIR:STATIC=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin
 
@@ -238,6 +250,9 @@ SDL_PRACTICE_SOURCE_DIR:STATIC=/home/devansh/C_C++/SDL_Learning/SDL-Api
 
 //Dependencies for the target
 texturedFont_LIB_DEPENDS:STATIC=general;SDL2_ttf;general;ResourceManager;
+
+//Dependencies for the target
+textured_rect_LIB_DEPENDS:STATIC=general;ResourceManager;
 
 
 ########################

@@ -34,6 +34,8 @@ public:
 
 	/* ================= SETTERS ================= */
 	// Sprite Setters:
+	void SetRect(const int x, const int y, const int w, const int h);
+	void SetRect(SDL_Rect& rect);
 	void SetPosition(const int x, const int y);
 	void SetPosX(const int x);
 	void SetPosY(const int y);
@@ -58,6 +60,7 @@ public:
 
 	/* ================= GETTERS ================= */
 	// Sprite Getters:
+	SDL_Rect& GetRect();
 	int GetPosX() const;
 	int GetPosY() const;
 	int GetWidth() const;
@@ -72,7 +75,7 @@ public:
 
 private:
 	SDL_Renderer* m_renderer;
-	TexturedRect* m_sprite;
+	TexturedRect m_sprite;
 	std::vector<Collider*> m_colliders;
 	void (*m_updateCallback)(void);
 };

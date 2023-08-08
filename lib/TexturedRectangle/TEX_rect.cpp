@@ -2,30 +2,27 @@
 
 ResourceManager& TexturedRect::s_resourceManager = ResourceManager::GetInstance();
 
+TexturedRect::TexturedRect()
+	: m_updateCallback(nullptr)
+{}
+
 TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath)
 	: m_updateCallback(nullptr)
 {
-	SDL_Surface* surface = s_resourceManager.GetSurface(sourcePath);
-	if(surface == nullptr) {
-		std::cerr << "Textured Rectangle Surface Error: " << SDL_GetError() << std::endl;
-	}
-
-	m_texture = SDL_CreateTextureFromSurface(renderer, surface);
-	SDL_FreeSurface(surface);
+	//std::string path = sourcePath;
+	SDL_Surface& surface = s_resourceManager.GetSurface(sourcePath);
+	m_texture = SDL_CreateTextureFromSurface(renderer, &surface);
 }
 
 TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath, SDL_Color key)
 	: m_updateCallback(nullptr)
 {
-	SDL_Surface* surface = s_resourceManager.GetSurface(sourcePath);
-	if(surface == nullptr) {
-		std::cerr << "textured rectangle surface error: " << SDL_GetError() << std::endl;
-	}
+	//std::string path = sourcePath;
+	SDL_Surface& surface = s_resourceManager.GetSurface(sourcePath);
 
-	SDL_SetColorKey(surface, SDL_TRUE, SDL_MapRGB(surface->format, key.r, key.g, key.b));
+	SDL_SetColorKey(&surface, SDL_TRUE, SDL_MapRGB(surface.format, key.r, key.g, key.b));
 	
-	m_texture = SDL_CreateTextureFromSurface(renderer, surface);
-	SDL_FreeSurface(surface);
+	m_texture = SDL_CreateTextureFromSurface(renderer, &surface);
 
 	m_colorKey = key;
 }
@@ -40,6 +37,10 @@ void TexturedRect::SetRect(const int x, const int y, const int w, const int h) {
 	m_rectangle.y = y;
 	m_rectangle.w = w;
 	m_rectangle.h = h;
+}
+
+void TexturedRect::SetRect(const SDL_Rect& rect) {
+	m_rectangle = rect;
 }
 
 void TexturedRect::SetPosition(const int x, const int y) {
@@ -88,7 +89,7 @@ int TexturedRect::GetHeight() const {
 	return m_rectangle.h;
 }
 
-SDL_Rect TexturedRect::GetRect() const {
+SDL_Rect& TexturedRect::GetRect() {
 	return m_rectangle;
 }
 

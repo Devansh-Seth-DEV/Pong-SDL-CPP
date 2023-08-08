@@ -15,7 +15,7 @@ public:
 	~ResourceManager();
 
 	static ResourceManager& GetInstance();
-	SDL_Surface* GetSurface(std::string sourcePath);
+	SDL_Surface& GetSurface(std::string sourcePath);
 	TTF_Font* GetFont(const char* fontFilePath, const int fontSize);
 
 private:

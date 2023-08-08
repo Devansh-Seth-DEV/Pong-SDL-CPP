@@ -20,6 +20,14 @@ void Collider::SetRect(const int x, const int y, const int w, const int h) {
 	m_colliderRect->h = h;
 }
 
+void Collider::SetRect(const SDL_Rect& rect) {
+	if(m_colliderRect != nullptr) {
+		delete m_colliderRect;
+	}
+	m_colliderRect = new SDL_Rect;
+	SetRect(rect.x, rect.y, rect.w, rect.h);
+}
+
 void Collider::SetPosition(const int x, const int y) {
 	m_colliderRect->x = x;
 	m_colliderRect->y = y;

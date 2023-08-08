@@ -6,17 +6,17 @@ SDLApp::SDLApp()
 	: m_maxFrameRate(static_cast<uint8_t>(1000/60)), m_renderCallback(nullptr), m_updateCallback(nullptr), m_eventCallback(nullptr)
 {}
 
-SDLApp::SDLApp(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, int renderIndex, Uint32 renderFlags)
+SDLApp::SDLApp(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, Uint32 winInitFlags, int renderIndex, Uint32 renderFlags)
 	: m_maxFrameRate(static_cast<uint8_t>(1000/60)), m_renderCallback(nullptr), m_updateCallback(nullptr), m_eventCallback(nullptr)
 {
-	App(title, x, y, w, h, winFlags, renderIndex, renderFlags);
+	App(title, x, y, w, h, winFlags, winInitFlags, renderIndex, renderFlags);
 }
 
-void SDLApp::App(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, int renderIndex, Uint32 renderFlags) {
-	if(!s_initialized && SDL_Init(SDL_INIT_VIDEO) < 0) {
+void SDLApp::App(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, Uint32 winInitFlags, int renderIndex, Uint32 renderFlags) {
+	if(!s_initialized && SDL_Init(winInitFlags) < 0) {
 		std::cerr << SDL_GetError() << std::endl;
 	} else {
-		std::cout << "SDL Video System Initialized" << std::endl;
+		std::cout << "SDL subSystem initialized" << std::endl;
 		s_initialized = true;
 	}
 

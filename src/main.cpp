@@ -1,16 +1,54 @@
 #include <iostream>
 
-#include <SDL.h>
-
+//custom static libraries
 #include <engine.h>
-#include <audio_mixer.h>
 #include <TEX_font.h>
 #include <game_entity.h>
+#include <audio_mixer.h>
 
 SDLApp app;
-TexturedFont label;
 
-void HandleEvent() {
+Entity* leftPaddle;
+Entity* rightPaddle;
+Entity* ball;
+
+Mixer* collisionSound;
+Mixer* scoreSound;
+
+void FreeSprites() {
+	delete leftPaddle;
+	delete rightPaddle;
+	delete ball;
+}
+
+void FreeSounds() {
+	delete collisionSound;
+	delete scoreSound;
+}
+
+void InitSprites() {
+	leftPaddle = new Entity(app.GetRenderer());
+	leftPaddle->AddSprite("./assets/images/pong/paddle-green.bmp");
+	leftPaddle->AddCollider2D();
+	
+	rightPaddle = new Entity(app.GetRenderer());
+	rightPaddle->AddSprite("./assets/images/pong/paddle-green.bmp");
+	rightPaddle->AddCollider2D();
+
+	ball = new Entity(app.GetRenderer());
+	ball->AddSprite("./assets/images/pong/ball.bmp");
+	ball->AddCollider2D();
+}
+
+void InitSounds() {
+	collisionSound = new Mixer("./assets/sounds/collision.wav");
+	collisionSound->SetupDevice();
+
+	scoreSound = new Mixer("./assets/sounds/score.wav");
+	scoreSound->SetupDevice();
+}
+
+void HandleEvents() {
 	SDL_Event event;
 	while(SDL_PollEvent(&event)) {
 		if(event.type == SDL_QUIT) {
@@ -19,27 +57,18 @@ void HandleEvent() {
 	}
 }
 
-
-void HandleRender() {
-	label.Render();
-}
-
 int main() {
-	const char* fontPath = "./assets/fonts/Open_24_Display_St.ttf";
-	const char* text = "HELLO WORLD";
-	SDL_Color textfg = {255, 255, 255, SDL_ALPHA_OPAQUE};
-	SDL_Renderer* renderer;
+	const char* title = "PONG";
+	app.App(title, 20, 20, 640, 480, SDL_WINDOW_SHOWN, SDL_INIT_VIDEO | SDL_INIT_AUDIO, -1, SDL_RENDERER_ACCELERATED);
 
-	app.App("SDL Greeting", 100, 100, 640, 400, SDL_WINDOW_SHOWN, -1, SDL_RENDERER_ACCELERATED); 
-	app.SetWindowBackgroundColor({0, 0, 0, SDL_ALPHA_OPAQUE});
-	app.SetMaxFrameRate(60);
-	renderer = app.GetRenderer();
-	
-	label.Label(renderer, fontPath, 32, text, textfg);
-	label.SetRect(app.GetWidth()/2-150, app.GetHeight()/2-50-32, 300, 100);
+	InitSprites();
+	InitSounds();
+	app.SetEventCallback(HandleEvents);
 
-	app.SetEventCallback(HandleEvent);
-	app.SetRenderCallback(HandleRender);
 	app.StartAppLoop();
+
+	FreeSprites();
+	FreeSounds();
+	std::cout << "PROGRAM TERMINATION SUCCESSFULLY" << std::endl;
 	return 0;
 }

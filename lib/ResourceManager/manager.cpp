@@ -1,13 +1,13 @@
 #include "manager.h"
 
 ResourceManager::~ResourceManager() {
-	delete &GetInstance();
 	std::unordered_map<std::string, TTF_Font*>::iterator it;
 	while(it != m_fonts.end()){
 		TTF_Font* font = it->second;
 		TTF_CloseFont(font);
 		font = nullptr;
 	}
+	std::cout << "all resources have been freed from memory" << std::endl;
 }
 
 ResourceManager& ResourceManager::GetInstance() {
@@ -15,15 +15,17 @@ ResourceManager& ResourceManager::GetInstance() {
 	return *m_staticInstance;
 }
 
-SDL_Surface* ResourceManager::GetSurface(std::string sourcePath) {
+SDL_Surface& ResourceManager::GetSurface(std::string sourcePath) {
 	auto search = m_surfaces.find(sourcePath);
 
 	if(search != m_surfaces.end()) {
-		return m_surfaces[sourcePath];
+		std::cout << "resource exists: " << sourcePath << std::endl;
+		return *search->second;
 	} else {
 		SDL_Surface* surface = SDL_LoadBMP(sourcePath.c_str());
 		m_surfaces.insert(std::make_pair(sourcePath, surface));
-		return surface; 
+		std::cout << "resource added: " << sourcePath << std::endl;
+		return *surface; 
 	}
 }
 

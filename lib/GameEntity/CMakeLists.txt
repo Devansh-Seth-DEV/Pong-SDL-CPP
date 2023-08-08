@@ -5,4 +5,10 @@ include_directories(
 	${CMAKE_SOURCE_DIR}/lib/Collider2D
 )
 
+link_libraries(
+        ResourceManager
+        textured_rect
+        Collider2D
+)
+
 add_library(GameEntity game_entity.cpp)
