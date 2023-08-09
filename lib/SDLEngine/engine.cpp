@@ -4,15 +4,19 @@ bool SDLApp::s_initialized = false;
 
 SDLApp::SDLApp()
 	: m_maxFrameRate(static_cast<uint8_t>(1000/60)), m_renderCallback(nullptr), m_updateCallback(nullptr), m_eventCallback(nullptr)
-{}
+{
+	m_bgColor = {0, 0, 0, SDL_ALPHA_OPAQUE};
+}
 
 SDLApp::SDLApp(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, Uint32 winInitFlags, int renderIndex, Uint32 renderFlags)
 	: m_maxFrameRate(static_cast<uint8_t>(1000/60)), m_renderCallback(nullptr), m_updateCallback(nullptr), m_eventCallback(nullptr)
 {
+	m_bgColor = {0, 0, 0, SDL_ALPHA_OPAQUE};
 	App(title, x, y, w, h, winFlags, winInitFlags, renderIndex, renderFlags);
 }
 
 void SDLApp::App(const char* title, const int x, const int y, const int w, const int h, Uint32 winFlags, Uint32 winInitFlags, int renderIndex, Uint32 renderFlags) {
+	m_bgColor = {0, 0, 0, SDL_ALPHA_OPAQUE};
 	if(!s_initialized && SDL_Init(winInitFlags) < 0) {
 		std::cerr << SDL_GetError() << std::endl;
 	} else {
@@ -36,9 +40,15 @@ void SDLApp::App(const char* title, const int x, const int y, const int w, const
 }
 
 SDLApp::~SDLApp() {
+	ResourceManager* manager = ResourceManager::GetInstance();
+	delete manager;
+	std::cout << "Resource Manager [free]" << std::endl;
 	SDL_DestroyRenderer(m_renderer);
+	std::cout << "Destroyed Renderer" << std::endl;
 	SDL_DestroyWindow(m_window);
-	SDL_Quit();
+	std::cout << "Destroyed Window" << std::endl;
+	SDL_Quit();	
+	std::cout << "SDL Quit Successfull" << std::endl;
 }
 
 void SDLApp::SetWindowBackgroundColor(SDL_Color color) {
@@ -89,8 +99,6 @@ void SDLApp::StartAppLoop() {
 		if(m_updateCallback != nullptr) {
 			m_updateCallback();
 		}
-		//SDL_SetRenderDrawColor(m_renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-		//SDL_RenderClear(m_renderer);
 
 		SDL_SetRenderDrawColor(	
 			m_renderer,

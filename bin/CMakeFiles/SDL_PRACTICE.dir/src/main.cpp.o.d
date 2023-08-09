@@ -311,8 +311,6 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: \
  /usr/include/X11/../SDL2/SDL_version.h \
  /usr/include/X11/../SDL2/SDL_locale.h \
  /usr/include/X11/../SDL2/SDL_misc.h \
- /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.h \
- /usr/include/X11/../SDL2/SDL_ttf.h /usr/include/X11/../SDL2/SDL.h \
  /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.h \
  /usr/include/c++/12/unordered_map \
  /usr/include/c++/12/ext/aligned_buffer.h \
@@ -323,7 +321,9 @@ CMakeFiles/SDL_PRACTICE.dir/src/main.cpp.o: \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/unordered_map.h \
  /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/utility \
- /usr/include/c++/12/bits/stl_relops.h \
+ /usr/include/c++/12/bits/stl_relops.h /usr/include/X11/../SDL2/SDL_ttf.h \
+ /usr/include/X11/../SDL2/SDL.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/TexturedFonts/TEX_font.h \
  /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/GameEntity/game_entity.h \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_vector.h \

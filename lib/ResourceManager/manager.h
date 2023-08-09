@@ -14,15 +14,18 @@ class ResourceManager {
 public:
 	~ResourceManager();
 
-	static ResourceManager& GetInstance();
-	SDL_Surface& GetSurface(std::string sourcePath);
+	void FreeResources();
+	void FreeImgResources(std::string resource);
+	void FreeFontResources(std::string resource);
+
+	static ResourceManager* GetInstance();
+	SDL_Surface* GetImgSurface(std::string sourcePath);
 	TTF_Font* GetFont(const char* fontFilePath, const int fontSize);
 
 private:
 	ResourceManager();
 	ResourceManager(const ResourceManager& manager);
 	ResourceManager operator=(const ResourceManager& manager);
-	static ResourceManager* Instance();
 
 private:
 	std::unordered_map<std::string, SDL_Surface*> m_surfaces;

@@ -6,11 +6,8 @@
 
 #include <SDL.h>
 
-struct RGB_ColorChannel {
-	uint8_t red;
-	uint8_t green;
-	uint8_t blue;
-};
+#include <manager.h>
+
 
 class SDLApp {
 public:

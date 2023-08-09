@@ -311,4 +311,16 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: \
  /usr/include/X11/../SDL2/SDL_timer.h \
  /usr/include/X11/../SDL2/SDL_version.h \
  /usr/include/X11/../SDL2/SDL_locale.h \
- /usr/include/X11/../SDL2/SDL_misc.h
+ /usr/include/X11/../SDL2/SDL_misc.h \
+ /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.h \
+ /usr/include/c++/12/unordered_map \
+ /usr/include/c++/12/ext/aligned_buffer.h \
+ /usr/include/c++/12/bits/hashtable.h \
+ /usr/include/c++/12/bits/hashtable_policy.h /usr/include/c++/12/tuple \
+ /usr/include/c++/12/bits/uses_allocator.h \
+ /usr/include/c++/12/bits/enable_special_members.h \
+ /usr/include/c++/12/bits/node_handle.h \
+ /usr/include/c++/12/bits/unordered_map.h \
+ /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/utility \
+ /usr/include/c++/12/bits/stl_relops.h /usr/include/X11/../SDL2/SDL_ttf.h \
+ /usr/include/X11/../SDL2/SDL.h

@@ -38,7 +38,7 @@ public:
 
 private:
 	static bool s_initialized;
-	static ResourceManager& s_resourceManager;
+	static ResourceManager* s_resourceManager;
 	SDL_Surface* m_surface;
 	SDL_Texture* m_texture;
 	SDL_Renderer* m_renderer;

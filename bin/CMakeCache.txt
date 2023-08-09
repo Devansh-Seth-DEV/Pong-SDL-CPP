@@ -237,7 +237,7 @@ GameEntity_LIB_DEPENDS:STATIC=general;ResourceManager;general;textured_rect;gene
 ResourceManager_LIB_DEPENDS:STATIC=general;SDL2;general;SDL2_ttf;
 
 //Dependencies for the target
-SDLEngine_LIB_DEPENDS:STATIC=general;SDL2;
+SDLEngine_LIB_DEPENDS:STATIC=general;SDL2;general;ResourceManager;
 
 //Value Computed by CMake
 SDL_PRACTICE_BINARY_DIR:STATIC=/home/devansh/C_C++/SDL_Learning/SDL-Api/bin

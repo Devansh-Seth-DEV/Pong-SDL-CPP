@@ -36,7 +36,8 @@ public:
 	void Render(SDL_Renderer* renderer, SDL_Rect& sourceRect);
 
 private:
-	static ResourceManager& s_resourceManager;
+	static ResourceManager* s_resourceManager;
+	std::string resource;
 	SDL_Rect m_rectangle;
 	SDL_Texture* m_texture;
 	SDL_Color m_colorKey;

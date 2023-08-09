@@ -355,8 +355,35 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Lea
   /usr/include/SDL2/SDL_timer.h \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/SDL_locale.h \
-  /usr/include/SDL2/SDL_misc.h
+  /usr/include/SDL2/SDL_misc.h \
+  /home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/SDL2/SDL_ttf.h \
+  /usr/include/SDL2/SDL.h
 
+
+/usr/include/c++/12/bits/stl_relops.h:
+
+/usr/include/c++/12/utility:
+
+/usr/include/c++/12/bits/uses_allocator.h:
+
+/usr/include/c++/12/bits/hashtable.h:
+
+/usr/include/c++/12/unordered_map:
+
+/home/devansh/C_C++/SDL_Learning/SDL-Api/lib/ResourceManager/manager.h:
 
 /usr/include/SDL2/SDL_system.h:
 
@@ -379,6 +406,8 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Lea
 /usr/include/SDL2/SDL_joystick.h:
 
 /usr/include/SDL2/SDL_keycode.h:
+
+/usr/include/c++/12/bits/hashtable_policy.h:
 
 /usr/include/SDL2/SDL_keyboard.h:
 
@@ -415,6 +444,8 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Lea
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512vbmi2intrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512vpopcntdqintrin.h:
+
+/usr/include/c++/12/bits/erase_if.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512ifmaintrin.h:
 
@@ -467,6 +498,8 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Lea
 /usr/lib/gcc/x86_64-linux-gnu/12/include/uintrintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/tsxldtrkintrin.h:
+
+/usr/include/c++/12/bits/unordered_map.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/tbmintrin.h:
 
@@ -527,6 +560,8 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Lea
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512vbmiintrin.h:
 
 /usr/include/c++/12/string:
+
+/usr/include/c++/12/bits/node_handle.h:
 
 /usr/include/c++/12/ext/atomicity.h:
 
@@ -631,6 +666,8 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Lea
 /usr/include/c++/12/iosfwd:
 
 /usr/include/linux/errno.h:
+
+/usr/include/c++/12/ext/aligned_buffer.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx5124fmapsintrin.h:
 
@@ -758,6 +795,8 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Lea
 
 /usr/include/c++/12/new:
 
+/usr/include/c++/12/bits/enable_special_members.h:
+
 /usr/include/SDL2/SDL_clipboard.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
@@ -853,6 +892,8 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Lea
 /usr/include/c++/12/bits/alloc_traits.h:
 
 /usr/include/c++/12/bits/stl_construct.h:
+
+/usr/include/c++/12/tuple:
 
 /usr/include/c++/12/bits/functional_hash.h:
 
@@ -959,6 +1000,8 @@ lib/SDLEngine/CMakeFiles/SDLEngine.dir/engine.cpp.o: /home/devansh/C_C++/SDL_Lea
 /usr/include/SDL2/close_code.h:
 
 /usr/include/string.h:
+
+/usr/include/SDL2/SDL_ttf.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512ifmavlintrin.h:
 

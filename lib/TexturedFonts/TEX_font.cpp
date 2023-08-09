@@ -1,7 +1,7 @@
 #include "TEX_font.h"
 
 bool TexturedFont::s_initialized = false;
-ResourceManager& TexturedFont::s_resourceManager = ResourceManager::GetInstance();
+ResourceManager* TexturedFont::s_resourceManager = ResourceManager::GetInstance();
 
 TexturedFont::TexturedFont()
 	: m_drawRect(false), m_surface(nullptr), m_texture(nullptr), m_font(nullptr), m_renderer(nullptr)
@@ -21,7 +21,7 @@ void TexturedFont::Label(SDL_Renderer* renderer, const char* fontFilePath, const
 		s_initialized = true;
 	}
 
-	m_font = s_resourceManager.GetFont(fontFilePath, fontSize);
+	m_font = s_resourceManager->GetFont(fontFilePath, fontSize);
 	m_surface = TTF_RenderText_Solid(m_font, label, fg);
 	
 	m_renderer = renderer;

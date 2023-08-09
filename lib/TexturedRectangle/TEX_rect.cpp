@@ -1,6 +1,6 @@
 #include "TEX_rect.h"
 
-ResourceManager& TexturedRect::s_resourceManager = ResourceManager::GetInstance();
+ResourceManager* TexturedRect::s_resourceManager = ResourceManager::GetInstance();
 
 TexturedRect::TexturedRect()
 	: m_updateCallback(nullptr)
@@ -9,25 +9,26 @@ TexturedRect::TexturedRect()
 TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath)
 	: m_updateCallback(nullptr)
 {
-	//std::string path = sourcePath;
-	SDL_Surface& surface = s_resourceManager.GetSurface(sourcePath);
-	m_texture = SDL_CreateTextureFromSurface(renderer, &surface);
+	resource = sourcePath;
+	SDL_Surface* surface = s_resourceManager->GetImgSurface(sourcePath);
+	m_texture = SDL_CreateTextureFromSurface(renderer, surface);
+	std::cout << "Created texture: " << sourcePath << std::endl;
 }
 
 TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath, SDL_Color key)
 	: m_updateCallback(nullptr)
 {
-	//std::string path = sourcePath;
-	SDL_Surface& surface = s_resourceManager.GetSurface(sourcePath);
+	SDL_Surface* surface = s_resourceManager->GetImgSurface(sourcePath);
 
-	SDL_SetColorKey(&surface, SDL_TRUE, SDL_MapRGB(surface.format, key.r, key.g, key.b));
+	SDL_SetColorKey(surface, SDL_TRUE, SDL_MapRGB(surface->format, key.r, key.g, key.b));
 	
-	m_texture = SDL_CreateTextureFromSurface(renderer, &surface);
+	m_texture = SDL_CreateTextureFromSurface(renderer, surface);
 
 	m_colorKey = key;
 }
 
 TexturedRect::~TexturedRect() {
+	s_resourceManager->FreeImgResources(resource);
 	SDL_DestroyTexture(m_texture);
 	m_updateCallback = nullptr;
 }

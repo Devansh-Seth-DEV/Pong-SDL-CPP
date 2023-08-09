@@ -44,6 +44,8 @@ public:
 	void SetHeight(const int h);
 
 	// Collider Setters:
+	void SetRect(const int index, const int x, const int y, const int w, const int h);
+	void SetRect(const int index, SDL_Rect& rect);
 	void SetPosition(const int index, const int x, const int y);
 	void SetPosX(const int index, const int x);
 	void SetPosY(const int index, const int y);
@@ -75,7 +77,7 @@ public:
 
 private:
 	SDL_Renderer* m_renderer;
-	TexturedRect m_sprite;
+	TexturedRect* m_sprite;
 	std::vector<Collider*> m_colliders;
 	void (*m_updateCallback)(void);
 };
