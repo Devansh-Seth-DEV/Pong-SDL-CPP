@@ -62,10 +62,10 @@ void HandleEvents() {
 		if(event.type == SDL_KEYDOWN) {
 			int y = leftPaddle->GetPosY();
 			if(event.key.keysym.sym == SDLK_w) {
-				//leftPaddle->SetPosition(
+				// change left paddle position in upward direction
 			}
 			else if(event.key.keysym.sym == SDLK_s) {
-				
+				// change left paddle position in downward direction
 			}
 		}	
 	}
@@ -74,7 +74,6 @@ void HandleEvents() {
 void HandleRenders() {
 	leftPaddle->Render();
 	rightPaddle->Render();
-	//ball->Render();
 }
 
 int main() {
