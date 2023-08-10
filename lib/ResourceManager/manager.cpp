@@ -77,6 +77,7 @@ TTF_Font* ResourceManager::GetFont(const char* fontFilePath, const int fontSize)
 			return nullptr;
 		}
 		m_fonts.insert(std::make_pair(fontFilePath, font));
+		std::cout << "resource added: " << fontFilePath << std::endl;
 		return font;
 	}
 }
