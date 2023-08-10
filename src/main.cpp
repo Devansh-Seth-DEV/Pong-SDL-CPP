@@ -27,8 +27,6 @@ TexturedFont* leftScoreLabel;
 TexturedFont* rightScoreLabel;
 
 SDL_Color fontFg = {255, 255, 255, SDL_ALPHA_OPAQUE};
-int leftScore = 0;
-int rightScore = 0;
 
 struct GameState {
 	float movementSpeed;
@@ -191,5 +189,6 @@ int main() {
 	FreeSprites();
 	FreeSounds();
 	FreeLabels();
+	delete gameState;
 	return 0;
 }
