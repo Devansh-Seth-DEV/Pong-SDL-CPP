@@ -4,11 +4,11 @@ bool TexturedFont::s_initialized = false;
 ResourceManager* TexturedFont::s_resourceManager = ResourceManager::GetInstance();
 
 TexturedFont::TexturedFont()
-	: m_drawRect(false), m_surface(nullptr), m_texture(nullptr), m_font(nullptr), m_renderer(nullptr)
+	: m_drawRect(false), m_label(""), m_surface(nullptr), m_texture(nullptr), m_font(nullptr), m_renderer(nullptr), m_updateCallback(nullptr), fontFile("")
 {}
 
 TexturedFont::TexturedFont(SDL_Renderer* renderer, const char* fontFilePath, const int fontSize, const char* label, SDL_Color& fg)
-	: m_drawRect(false)
+	: m_drawRect(false), m_updateCallback(nullptr)
 {
 	Label(renderer, fontFilePath, fontSize, label, fg);
 }
@@ -21,21 +21,28 @@ void TexturedFont::Label(SDL_Renderer* renderer, const char* fontFilePath, const
 		s_initialized = true;
 	}
 
+	fontFile = fontFilePath;
+	m_label.erase();
+	m_label.assign(label);
+
 	m_font = s_resourceManager->GetFont(fontFilePath, fontSize);
-	m_surface = TTF_RenderText_Solid(m_font, label, fg);
+	m_surface = TTF_RenderText_Solid(m_font, m_label.c_str(), fg);
+	m_texture = SDL_CreateTextureFromSurface(renderer, m_surface);
+	SDL_FreeSurface(m_surface);
 	
 	m_renderer = renderer;
 	m_rectangle.x = 0;
 	m_rectangle.y = 0;
 	m_rectangle.w = 10;
 	m_rectangle.h = 10;
-	m_label = label;
 	m_fg = fg;
 }
 
 TexturedFont::~TexturedFont() {
+	s_resourceManager->FreeFontResources(fontFile);
 	SDL_DestroyTexture(m_texture);
 	m_texture = nullptr;
+	m_font = nullptr;
 }
 
 void TexturedFont::Quit() {
@@ -48,6 +55,10 @@ void TexturedFont::SetRect(const int x, const int y, const int w, const int h) {
 	m_rectangle.y = y;
 	m_rectangle.w = w;
 	m_rectangle.h = h;
+}
+
+void TexturedFont::SetRect(const SDL_Rect& rect) {
+	m_rectangle = rect;
 }
 
 void TexturedFont::SetPosX(const int x) {
@@ -67,21 +78,29 @@ void TexturedFont::SetHeight(const int h) {
 }
 
 void TexturedFont::SetLabel(const char* label) {
-	SDL_FreeSurface(m_surface);
+	SDL_DestroyTexture(m_texture);
+	m_label.erase();
+	m_label.assign(label);
 
-	m_surface = TTF_RenderText_Solid(m_font, label, m_fg);
-   	SDL_DestroyTexture(m_texture);
-	m_texture = nullptr;
-	m_label = label;
+	m_surface = TTF_RenderText_Solid(m_font, m_label.c_str(), m_fg);
+	m_texture = SDL_CreateTextureFromSurface(m_renderer, m_surface);
+	SDL_FreeSurface(m_surface);
 }	
 
 void TexturedFont::SetLabelColor(SDL_Color fg) {
-	SDL_FreeSurface(m_surface);
+	SDL_DestroyTexture(m_texture);
 	
 	m_surface = TTF_RenderText_Solid(m_font, m_label.c_str(), fg);
-	SDL_DestroyTexture(m_texture);
-	m_texture = nullptr;
+	m_texture = SDL_CreateTextureFromSurface(m_renderer, m_surface);
 	m_fg = fg;
+}
+
+void TexturedFont::SetDrawRect(const bool flag) {
+	m_drawRect = flag;
+}
+
+void TexturedFont::SetUpdateCallback(void (*updateCallback)(void)) {
+	m_updateCallback = updateCallback;
 }
 
 SDL_Rect& TexturedFont::GetRect() {
@@ -113,11 +132,6 @@ std::string TexturedFont::GetLabel() const {
 }
 
 void TexturedFont::Render() {
-	if(m_texture == nullptr) {
-		m_texture = SDL_CreateTextureFromSurface(m_renderer, m_surface);
-		SDL_FreeSurface(m_surface);
-	}
-
 	if(m_drawRect) {
 		SDL_SetRenderDrawColor(m_renderer, m_fg.r, m_fg.g, m_fg.g, m_fg.a);
 		SDL_RenderDrawRect(m_renderer, &m_rectangle);
@@ -125,12 +139,8 @@ void TexturedFont::Render() {
 	SDL_RenderCopy(m_renderer, m_texture, nullptr, &m_rectangle);
 }
 
-
-void TexturedFont::Render(bool showBorder) {
-	m_drawRect = showBorder;
-	Render();
-}
-
 void TexturedFont::Update() {
-
+	if(m_updateCallback != nullptr) {
+		m_updateCallback();
+	}
 }

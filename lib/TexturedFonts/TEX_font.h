@@ -2,6 +2,7 @@
 #define TEX_FONT_H
 
 #include <iostream>
+#include <string>
 
 #include <SDL.h>
 #include <SDL_ttf.h>
@@ -17,12 +18,15 @@ public:
 	static void Quit();
 
 	void SetRect(const int x, const int y, const int w, const int h);
+	void SetRect(const SDL_Rect& rect);
 	void SetPosX(const int x);
 	void SetPosY(const int y);
 	void SetWidth(const int w);
 	void SetHeight(const int h);
 	void SetLabel(const char* label);
 	void SetLabelColor(SDL_Color fg);
+	void SetDrawRect(const bool flag);
+	void SetUpdateCallback(void (*updateCallback)(void));
 
 	SDL_Rect& GetRect();
 	int GetPosX() const;
@@ -33,10 +37,10 @@ public:
 	std::string GetLabel() const;
 
 	void Render();
-	void Render(bool showBorder);
 	void Update();
 
 private:
+	std::string fontFile;
 	static bool s_initialized;
 	static ResourceManager* s_resourceManager;
 	SDL_Surface* m_surface;
@@ -47,6 +51,8 @@ private:
 	std::string m_label;
 	SDL_Color m_fg;
 	bool m_drawRect;
+
+	void (*m_updateCallback)(void);
 };
 
 #endif /* TEX_font.h */
