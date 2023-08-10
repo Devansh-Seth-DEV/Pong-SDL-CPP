@@ -19,7 +19,7 @@ public:
 	void SetColorKey(SDL_Color key);
 	void SetUpdateCallback(void (*updateCallback)(void));
 
-	SDL_Rect& GetCollider() const;
+	SDL_Rect& GetCollider();
 	int GetPosX() const;
 	int GetPosY() const;
 	int GetWidth() const;
@@ -30,7 +30,7 @@ public:
 	void Render(SDL_Renderer* renderer);
 
 private:
-	SDL_Rect* m_colliderRect;
+	SDL_Rect m_colliderRect;
 	void (*m_updateCallback)(void);
 	SDL_Color m_color;
 };
