@@ -26,7 +26,7 @@ void ResourceManager::FreeImgResources(std::string resource) {
 		m_surfaces.erase(resource);
 		std::cout << "Resource: " << resource << " [free]" << std::endl;
 	} else {
-		std::cout << "Resource: " << resource << " [ already free]" << std::endl;
+		std::cout << "Resource: " << resource << " [already free]" << std::endl;
 	}
 }
 
@@ -37,7 +37,7 @@ void ResourceManager::FreeFontResources(std::string resource) {
 		m_fonts.erase(resource);
 		std::cout << "Resource: " << resource << " [free]" << std::endl;
 	} else {
-		std::cout << "Resource: " << resource << " [ already free]" << std::endl;
+		std::cout << "Resource: " << resource << " [already free]" << std::endl;
 	}
 }
 

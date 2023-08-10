@@ -1,2 +1,0 @@
-/usr/bin/ar qc libGameEntity.a CMakeFiles/GameEntity.dir/game_entity.cpp.o
-/usr/bin/ranlib libGameEntity.a
