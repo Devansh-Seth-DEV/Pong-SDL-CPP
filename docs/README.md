@@ -44,15 +44,19 @@ Build
 -
 > NOTE: Do run the commands in project directory
 
-1. Run CMake command using `config` file
+1. Create `bin` directory
+```bash
+$ mkdir bin
+```
+2. Run CMake command using `config` file
 ```bash
 $ sh config.sh
 ```
-2. Build project using `build` file
+3. Build project using `build` file
 ```bash
 $ sh build.sh
 ```
-3. Run project using `run` file
+4. Run project using `run` file
 ```bash
 $ sh run.sh
 ```
