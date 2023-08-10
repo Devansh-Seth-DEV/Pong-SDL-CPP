@@ -59,7 +59,7 @@ void IncRightScore() {
 }
 
 void InitSprites() {
-	SDL_Rect paddle = {0, 20, 32, 128};
+	SDL_Rect paddle = {0, app.GetHeight()/2-(128/2), 32, 128};
 	SDL_Rect ballRect = {app.GetWidth()/2, app.GetHeight()/2, 20, 20};
 
 	leftPaddle = new Entity(app.GetRenderer());
@@ -96,8 +96,8 @@ void InitScores() {
 	leftScoreLabel->SetRect(scoreRect);
 	leftScoreLabel->SetDrawRect(false);
 	
-	rightScoreLabel = new TexturedFont(app.GetRenderer(), FONT_FILE, FONT_SIZE, "LEFT 0", fontFg);
-	rightScoreLabel->SetRect(rightPaddle->GetPosX()-scoreRect.w, scoreRect.y, scoreRect.w, scoreRect.h);
+	rightScoreLabel = new TexturedFont(app.GetRenderer(), FONT_FILE, FONT_SIZE, "RIGHT 0", fontFg);
+	rightScoreLabel->SetRect(rightPaddle->GetPosX()-scoreRect.w-10, scoreRect.y, scoreRect.w, scoreRect.h);
 	rightScoreLabel->SetDrawRect(false);
 }
 
