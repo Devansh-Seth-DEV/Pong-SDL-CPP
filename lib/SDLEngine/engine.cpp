@@ -100,6 +100,7 @@ void SDLApp::StartAppLoop() {
 			m_updateCallback();
 		}
 
+
 		SDL_SetRenderDrawColor(	
 			m_renderer,
 			m_bgColor.r,
@@ -108,6 +109,7 @@ void SDLApp::StartAppLoop() {
 			m_bgColor.a
 		);
 		SDL_RenderClear(m_renderer);
+
 
 		if(m_renderCallback != nullptr) {
 			m_renderCallback();

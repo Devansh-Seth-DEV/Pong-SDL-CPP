@@ -30,6 +30,19 @@ SDL_Color fontFg = {255, 255, 255, SDL_ALPHA_OPAQUE};
 int leftScore = 0;
 int rightScore = 0;
 
+struct GameState {
+	float movementSpeed;
+	float ballSpeed;
+	float ballXVelocity;
+	float ballYVelocity;
+	int leftScore;
+	int rightScore;
+	bool updateRightScore;
+	bool updateLeftScore;
+};
+
+GameState* gameState;
+
 void FreeSprites() {
 	delete leftPaddle;
 	delete rightPaddle;
@@ -46,16 +59,12 @@ void FreeLabels() {
 	delete rightScoreLabel;
 }
 
-void IncLeftScore() {
-	leftScore++;
-	const char* label = std::string("LEFT " + std::to_string(leftScore)).c_str();
-	leftScoreLabel->SetLabel(label);
+std::string GetLeftScore() {
+	return std::string("LEFT " + std::to_string(gameState->leftScore));
 }
 
-void IncRightScore() {
-	rightScore++;
-	const char* label = std::string("RIGHT " + std::to_string(rightScore)).c_str();
-	rightScoreLabel->SetLabel(label);
+std::string GetRightScore() {
+	return std::string("RIGHT " + std::to_string(gameState->rightScore));
 }
 
 void InitSprites() {
@@ -92,13 +101,15 @@ void InitSounds() {
 void InitScores() {
 	SDL_Rect scoreRect = {leftPaddle->GetPosX()+leftPaddle->GetWidth(), 0, 70, FONT_SIZE};
 
-	leftScoreLabel = new TexturedFont(app.GetRenderer(), FONT_FILE, FONT_SIZE, "LEFT 0", fontFg);
+	leftScoreLabel = new TexturedFont(app.GetRenderer(), FONT_FILE, FONT_SIZE, "", fontFg);
 	leftScoreLabel->SetRect(scoreRect);
 	leftScoreLabel->SetDrawRect(false);
+	leftScoreLabel->SetLabel(GetLeftScore().c_str());
 	
-	rightScoreLabel = new TexturedFont(app.GetRenderer(), FONT_FILE, FONT_SIZE, "RIGHT 0", fontFg);
+	rightScoreLabel = new TexturedFont(app.GetRenderer(), FONT_FILE, FONT_SIZE, "", fontFg);
 	rightScoreLabel->SetRect(rightPaddle->GetPosX()-scoreRect.w-10, scoreRect.y, scoreRect.w, scoreRect.h);
 	rightScoreLabel->SetDrawRect(false);
+	rightScoreLabel->SetLabel(GetRightScore().c_str());
 }
 
 
@@ -113,16 +124,34 @@ void HandleEvents() {
 			int y = leftPaddle->GetPosY();
 			if(event.key.keysym.sym == SDLK_w) {
 				// change left paddle position in upward direction
-				IncLeftScore();
+				gameState->updateLeftScore = true;
 			} else if(event.key.keysym.sym == SDLK_s) {
 				// change left paddle position in downward direction
 			} else if(event.key.keysym.sym == SDLK_i) {
-				IncRightScore();
+				gameState->updateRightScore = true;
 			} else if(event.key.keysym.sym == SDLK_k) {
 			}
 
 		}	
 	}
+}
+
+void HandleScoreUpdates() {
+	if(gameState->updateLeftScore) {
+		gameState->leftScore++;
+		leftScoreLabel->SetLabel(GetLeftScore().c_str());
+		gameState->updateLeftScore = false;
+	}
+	if(gameState->updateRightScore) {
+		gameState->rightScore++;
+		rightScoreLabel->SetLabel(GetRightScore().c_str());
+		gameState->updateRightScore = false;
+	}
+}
+
+void HandleUpdates() {
+	leftScoreLabel->Update();
+	rightScoreLabel->Update();
 }
 
 void HandleRenders() {
@@ -137,12 +166,24 @@ void HandleRenders() {
 int main() {
 	const char* title = "PONG";
 	app.App(title, 20, 20, 640, 480, SDL_WINDOW_SHOWN, SDL_INIT_VIDEO | SDL_INIT_AUDIO, -1, SDL_RENDERER_ACCELERATED);
+	gameState = new GameState;
+	gameState->movementSpeed 	= 1.0f;
+	gameState->ballSpeed 	 	= 1.0f;
+	gameState->ballXVelocity 	= 1.0f;
+	gameState->ballYVelocity 	= 1.0f;
+	gameState->leftScore 	 	= 0;
+	gameState->rightScore 	 	= 0;
+	gameState->updateLeftScore  = false;
+	gameState->updateRightScore = false;
 
 	InitSprites();
 	InitSounds();
 	InitScores();
-
+	
+	leftScoreLabel->SetUpdateCallback(HandleScoreUpdates);
+	rightScoreLabel->SetUpdateCallback(HandleScoreUpdates);
 	app.SetEventCallback(HandleEvents);
+	app.SetUpdateCallback(HandleUpdates);
 	app.SetRenderCallback(HandleRenders);
 
 	app.StartAppLoop();
