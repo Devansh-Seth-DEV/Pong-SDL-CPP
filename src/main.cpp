@@ -101,12 +101,12 @@ void InitScores() {
 
 	leftScoreLabel = new TexturedFont(app.GetRenderer(), FONT_FILE, FONT_SIZE, "", fontFg);
 	leftScoreLabel->SetRect(scoreRect);
-	leftScoreLabel->SetDrawRect(false);
+	leftScoreLabel->SetDrawRect(true);
 	leftScoreLabel->SetLabel(GetLeftScore().c_str());
 	
 	rightScoreLabel = new TexturedFont(app.GetRenderer(), FONT_FILE, FONT_SIZE, "", fontFg);
 	rightScoreLabel->SetRect(rightPaddle->GetPosX()-scoreRect.w-10, scoreRect.y, scoreRect.w, scoreRect.h);
-	rightScoreLabel->SetDrawRect(false);
+	rightScoreLabel->SetDrawRect(true);
 	rightScoreLabel->SetLabel(GetRightScore().c_str());
 }
 
