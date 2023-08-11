@@ -8,6 +8,7 @@
 
 #define PADDLE_SPRITE "./assets/images/pong/paddle-green.bmp"
 #define BALL_SPRITE "./assets/images/pong/ball.bmp"
+#define COURT_SPRITE "./assets/images/pong/court.bmp"
 #define FONT_FILE "./assets/fonts/Open_24_Display_St.ttf"
 #define COLLISION_SOUND "./assets/sounds/collision.wav"
 #define SCORE_SOUND "./assets/sounds/score.wav"
@@ -19,6 +20,7 @@ SDLApp app;
 Entity* leftPaddle;
 Entity* rightPaddle;
 Entity* ball;
+Entity* court;
 
 Mixer* collisionSound;
 Mixer* scoreSound;
@@ -39,9 +41,17 @@ struct GameState {
 	bool updateLeftScore;
 };
 
+struct PaddleState {
+	bool goUp;
+	bool goDown;
+};
+
 GameState* gameState;
+PaddleState leftPaddleState;
+PaddleState rightPaddleState;
 
 void FreeSprites() {
+	delete court;
 	delete leftPaddle;
 	delete rightPaddle;
 	delete ball;
@@ -68,6 +78,8 @@ std::string GetRightScore() {
 void InitSprites() {
 	SDL_Rect paddle = {0, app.GetHeight()/2-(128/2), 32, 128};
 	SDL_Rect ballRect = {app.GetWidth()/2, app.GetHeight()/2, 20, 20};
+	ballRect.x += ballRect.w/2;
+	ballRect.y += ballRect.h/2;
 
 	leftPaddle = new Entity(app.GetRenderer());
 	leftPaddle->AddSprite(PADDLE_SPRITE);
@@ -86,6 +98,10 @@ void InitSprites() {
 	ball->AddCollider2D();
 	ball->SetRect(ballRect.x-ballRect.w, ballRect.y-ballRect.h, ballRect.w, ballRect.h);
 	ball->SetRect(0, ball->GetRect());
+
+	court = new Entity(app.GetRenderer());
+	court->AddSprite(COURT_SPRITE);
+	court->SetRect(0, 0, app.GetWidth(), app.GetHeight());
 }
 
 void InitSounds() {
@@ -111,29 +127,6 @@ void InitScores() {
 }
 
 
-void HandleEvents() {
-	SDL_Event event;
-	while(SDL_PollEvent(&event)) {
-		if(event.type == SDL_QUIT) {
-			app.StopAppLoop();
-		}
-
-		if(event.type == SDL_KEYDOWN) {
-			int y = leftPaddle->GetPosY();
-			if(event.key.keysym.sym == SDLK_w) {
-				// change left paddle position in upward direction
-				gameState->updateLeftScore = true;
-			} else if(event.key.keysym.sym == SDLK_s) {
-				// change left paddle position in downward direction
-			} else if(event.key.keysym.sym == SDLK_i) {
-				gameState->updateRightScore = true;
-			} else if(event.key.keysym.sym == SDLK_k) {
-			}
-
-		}	
-	}
-}
-
 void HandleScoreUpdates() {
 	if(gameState->updateLeftScore) {
 		gameState->leftScore++;
@@ -147,12 +140,90 @@ void HandleScoreUpdates() {
 	}
 }
 
+void HandlePaddleUpdates() {
+	int leftPaddleY = leftPaddle->GetPosY();
+	int rightPaddleY = rightPaddle->GetPosY();
+	if(leftPaddleState.goUp) {
+		if(leftPaddleY-gameState->movementSpeed <= 0) {
+			leftPaddleY = 0;
+		} else {
+			leftPaddleY -= gameState->movementSpeed;
+		}
+		leftPaddleState.goUp = false;
+	} else if(leftPaddleState.goDown) {
+		if(leftPaddleY+leftPaddle->GetHeight()+gameState->movementSpeed >= app.GetHeight()) {
+			leftPaddleY = app.GetHeight()-leftPaddle->GetHeight();
+		} else {
+			leftPaddleY += gameState->movementSpeed;
+		}
+		leftPaddleState.goDown = false;
+	} else {
+		leftPaddleY += 0;
+	}
+
+	if(rightPaddleState.goUp) {
+		if(rightPaddleY-gameState->movementSpeed <= 0) {
+			rightPaddleY = 0;
+		} else {
+			rightPaddleY -= gameState->movementSpeed;
+		}
+		rightPaddleState.goUp = false;
+	} else if(rightPaddleState.goDown) {
+		if(rightPaddleY+rightPaddle->GetHeight()+gameState->movementSpeed >= app.GetHeight()) {
+			rightPaddleY = app.GetHeight()-rightPaddle->GetHeight();
+		} else {
+			rightPaddleY += gameState->movementSpeed;
+		}
+		rightPaddleState.goDown = false;
+	} else {
+		rightPaddleY += 0;
+	}
+
+	leftPaddle->SetPosY(leftPaddleY);
+	leftPaddle->SetPosY(0, leftPaddleY);
+	rightPaddle->SetPosY(rightPaddleY);
+	rightPaddle->SetPosY(0, rightPaddleY);
+}
+
+void HandleEvents() {
+	SDL_Event event;
+	while(SDL_PollEvent(&event)) {
+		if(event.type == SDL_QUIT) {
+			app.StopAppLoop();
+		}
+
+		if(event.type == SDL_KEYDOWN) {
+			int y = leftPaddle->GetPosY();
+			if(event.key.keysym.sym == SDLK_w) {
+				// change left paddle position in upward direction
+				leftPaddleState = {true, false};
+			} else if(event.key.keysym.sym == SDLK_s) {
+				// change left paddle position in downward direction
+				leftPaddleState = {false, true};
+			}
+			
+			if(event.key.keysym.sym == SDLK_i) {
+				// change right paddle position in upward direction
+				rightPaddleState = {true, false};
+			} else if(event.key.keysym.sym == SDLK_k) {
+				// change right paddle position in downward direction
+				rightPaddleState = {false, true};
+			}
+
+		}	
+	}
+}
+
 void HandleUpdates() {
+	leftPaddle->Update();
+	rightPaddle->Update();
 	leftScoreLabel->Update();
 	rightScoreLabel->Update();
 }
 
 void HandleRenders() {
+	court->RenderSprite();
+
 	leftScoreLabel->Render();
 	rightScoreLabel->Render();
 
@@ -164,8 +235,9 @@ void HandleRenders() {
 int main() {
 	const char* title = "PONG";
 	app.App(title, 20, 20, 640, 480, SDL_WINDOW_SHOWN, SDL_INIT_VIDEO | SDL_INIT_AUDIO, -1, SDL_RENDERER_ACCELERATED);
+	
 	gameState = new GameState;
-	gameState->movementSpeed 	= 1.0f;
+	gameState->movementSpeed 	= 5.0f;
 	gameState->ballSpeed 	 	= 1.0f;
 	gameState->ballXVelocity 	= 1.0f;
 	gameState->ballYVelocity 	= 1.0f;
@@ -174,10 +246,15 @@ int main() {
 	gameState->updateLeftScore  = false;
 	gameState->updateRightScore = false;
 
+	leftPaddleState = {false, false};
+	rightPaddleState = leftPaddleState;
+
 	InitSprites();
 	InitSounds();
 	InitScores();
 	
+	leftPaddle->SetUpdateCallback(HandlePaddleUpdates);
+	rightPaddle->SetUpdateCallback(HandlePaddleUpdates);
 	leftScoreLabel->SetUpdateCallback(HandleScoreUpdates);
 	rightScoreLabel->SetUpdateCallback(HandleScoreUpdates);
 	app.SetEventCallback(HandleEvents);
