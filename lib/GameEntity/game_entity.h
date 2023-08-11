@@ -36,22 +36,34 @@ public:
 	// Sprite Setters:
 	void SetRect(const int x, const int y, const int w, const int h);
 	void SetRect(SDL_Rect& rect);
+
 	void SetPosition(const int x, const int y);
 	void SetPosX(const int x);
 	void SetPosY(const int y);
+
 	void SetDimention(const int w, const int h);
 	void SetWidth(const int w);
 	void SetHeight(const int h);
 
+	void SetTop(const int x, const int y);
+	void SetBottom(const int x, const int y);
+	void SetLeft(const int x, const int y);
+	void SetRight(const int x, const int y);
+	void SetCenter(const int x, const int y);
+
 	// Collider Setters:
 	void SetRect(const int index, const int x, const int y, const int w, const int h);
 	void SetRect(const int index, SDL_Rect& rect);
+
 	void SetPosition(const int index, const int x, const int y);
 	void SetPosX(const int index, const int x);
 	void SetPosY(const int index, const int y);
+
 	void SetDimention(const int index, const int w, const int h);
 	void SetWidth(const int index, const int w);
 	void SetHeight(const int index, const int h);
+
+
 	void SetColliderColorKey(SDL_Color key);
 	void SetColliderColorKey(const int index, SDL_Color key);
 
@@ -63,13 +75,30 @@ public:
 	/* ================= GETTERS ================= */
 	// Sprite Getters:
 	SDL_Rect& GetRect();
+
 	int GetPosX() const;
 	int GetPosY() const;
 	int GetWidth() const;
 	int GetHeight() const;
+
+	int GetTopPosX() const;
+	int GetTopPosY() const;
+
+	int GetBottomPosX() const;
+	int GetBottomPosY() const;
+
+	int GetLeftPosX() const;
+	int GetLeftPosY() const;
+
+	int GetRightPosX() const;
+	int GetRightPosY() const;
+
+	int GetCenterPosX() const;
+	int GetCenterPosY() const;
 	
 	// Collider Getters:
 	Collider& GetCollider(const int index) const;
+
 	int GetPosX(const int index) const;
 	int GetPosY(const int index) const;
 	int GetWidth(const int index) const;

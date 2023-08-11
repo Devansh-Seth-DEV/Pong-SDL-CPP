@@ -17,18 +17,43 @@ public:
 
 	void SetRect(const int x, const int y, const int w, const int h);
 	void SetRect(const SDL_Rect& rect);
+
 	void SetPosition(const int x, const int y);
 	void SetDimention(const int w, const int h);
+
 	void SetWidth(const int w);
    	void SetHeight(const int h);
 	void SetPosX(const int x);
 	void SetPosY(const int y);
+
+	void SetTop(const int x, const int y);
+	void SetBottom(const int x, const int y);
+	void SetLeft(const int x, const int y);
+	void SetRight(const int x, const int y);
+	void SetCenter(const int x, const int y);
+
 	void SetUpdateCallback(void (*updateCallback)(void));
 
 	int GetPosX() const;
 	int GetPosY() const;
 	int GetWidth() const;
 	int GetHeight() const;
+
+	int GetTopPosX() const;
+	int GetTopPosY() const;
+
+	int GetBottomPosX() const;
+	int GetBottomPosY() const;
+
+	int GetLeftPosX() const;
+	int GetLeftPosY() const;
+
+	int GetRightPosX() const;
+	int GetRightPosY() const;
+
+	int GetCenterPosX() const;
+	int GetCenterPosY() const;
+
 	SDL_Rect& GetRect();
 
 	void Update();

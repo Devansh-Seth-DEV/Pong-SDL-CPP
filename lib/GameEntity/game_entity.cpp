@@ -133,6 +133,26 @@ void Entity::SetHeight(const int h) {
 	m_sprite->SetHeight(h);
 }
 
+void Entity::SetTop(const int x, const int y) {
+	m_sprite->SetTop(x, y);
+}
+
+void Entity::SetBottom(const int x, const int y) {
+	m_sprite->SetBottom(x, y);
+}
+
+void Entity::SetLeft(const int x, const int y) {
+	m_sprite->SetLeft(x, y);
+}
+
+void Entity::SetRight(const int x, const int y) {
+	m_sprite->SetRight(x, y);
+}
+
+void Entity::SetCenter(const int x, const int y) {
+	m_sprite->SetCenter(x, y);
+}
+
 void Entity::SetRect(const int index, const int x, const int y, const int w, const int h) {
 	m_colliders[index]->SetRect(x, y, w, h);
 }
@@ -211,6 +231,46 @@ int Entity::GetWidth() const {
 
 int Entity::GetHeight() const {
 	return m_sprite->GetHeight();
+}
+
+int Entity::GetTopPosX() const {
+	return m_sprite->GetTopPosX();
+}
+
+int Entity::GetTopPosY() const {
+	return m_sprite->GetTopPosY();
+}
+
+int Entity::GetBottomPosX() const {
+	return m_sprite->GetBottomPosX();
+}
+
+int Entity::GetBottomPosY() const {
+	return m_sprite->GetBottomPosY();
+}
+
+int Entity::GetLeftPosX() const {
+	return m_sprite->GetLeftPosX();
+}
+
+int Entity::GetLeftPosY() const {
+   return m_sprite->GetLeftPosY();
+}
+
+int Entity::GetRightPosX() const {
+	return m_sprite->GetRightPosX();
+}
+
+int Entity::GetRightPosY() const {
+	return m_sprite->GetRightPosY();
+}
+
+int Entity::GetCenterPosX() const {
+	return m_sprite->GetCenterPosX();
+}
+
+int Entity::GetCenterPosY() const {
+	return m_sprite->GetCenterPosY();
 }
 
 Collider& Entity::GetCollider(const int index) const {
