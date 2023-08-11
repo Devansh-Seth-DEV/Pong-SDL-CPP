@@ -18,6 +18,7 @@ public:
 	~SDLApp();
 
 	void SetWindowBackgroundColor(SDL_Color color);
+	void SetIcon(const char* iconPath);
 	void SetEventCallback(void (*func)(void));
 	void SetRenderCallback(void (*func)(void));
 	void SetUpdateCallback(void (*func)(void));
@@ -35,6 +36,7 @@ private:
 
 	SDL_Window* m_window;
 	SDL_Renderer* m_renderer;
+	std::string m_iconPath;
 	SDL_Color m_bgColor;
 	bool m_run;
 	uint8_t m_maxFrameRate;

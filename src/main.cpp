@@ -9,6 +9,7 @@
 #define PADDLE_SPRITE "./assets/images/pong/paddle-green.bmp"
 #define BALL_SPRITE "./assets/images/pong/ball.bmp"
 #define COURT_SPRITE "./assets/images/pong/court.bmp"
+#define ICON "./assets/images/pong/icon.bmp"
 #define FONT_FILE "./assets/fonts/Open_24_Display_St.ttf"
 #define COLLISION_SOUND "./assets/sounds/collision.wav"
 #define SCORE_SOUND "./assets/sounds/score.wav"
@@ -235,9 +236,10 @@ void HandleRenders() {
 int main() {
 	const char* title = "PONG";
 	app.App(title, 20, 20, 640, 480, SDL_WINDOW_SHOWN, SDL_INIT_VIDEO | SDL_INIT_AUDIO, -1, SDL_RENDERER_ACCELERATED);
-	
+	app.SetIcon(ICON);
+
 	gameState = new GameState;
-	gameState->movementSpeed 	= 5.0f;
+	gameState->movementSpeed 	= 8.0f;
 	gameState->ballSpeed 	 	= 1.0f;
 	gameState->ballXVelocity 	= 1.0f;
 	gameState->ballYVelocity 	= 1.0f;

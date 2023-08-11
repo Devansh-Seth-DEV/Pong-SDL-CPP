@@ -41,7 +41,9 @@ void SDLApp::App(const char* title, const int x, const int y, const int w, const
 
 SDLApp::~SDLApp() {
 	ResourceManager* manager = ResourceManager::GetInstance();
+	manager->FreeImgResources(m_iconPath);
 	delete manager;
+	manager = nullptr;
 	std::cout << "Resource Manager [free]" << std::endl;
 	SDL_DestroyRenderer(m_renderer);
 	std::cout << "Destroyed Renderer" << std::endl;
@@ -54,6 +56,17 @@ SDLApp::~SDLApp() {
 void SDLApp::SetWindowBackgroundColor(SDL_Color color) {
 	m_bgColor = color;
 }
+
+void SDLApp::SetIcon(const char* iconPath) {
+	m_iconPath = iconPath;
+	SDL_Surface* icon = ResourceManager::GetInstance()->GetImgSurface(iconPath);
+	if(icon) {
+		SDL_SetWindowIcon(m_window, icon);
+	} else {
+		std::cerr << "window icon load error: " << SDL_GetError() << std::endl;
+	}
+}
+		
 
 void SDLApp::SetEventCallback(void (*func)(void)) {
 	m_eventCallback = func;
