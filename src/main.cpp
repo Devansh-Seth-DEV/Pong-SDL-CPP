@@ -78,7 +78,7 @@ std::string GetRightScore() {
 }
 
 void InitSprites() {
-	SDL_Rect paddle = {0, app.GetHeight()/2-(128/2), 32, 128};
+	SDL_Rect paddle = {0, app.GetHeight()/2-(128/2), 28, 128};
 	SDL_Rect ballRect = {app.GetWidth()/2, app.GetHeight()/2, 20, 20};
 	ballRect.x += ballRect.w/2;
 	ballRect.y += ballRect.h/2;
@@ -296,9 +296,10 @@ int main() {
 	const char* title = "PONG";
 	app.App(title, 20, 20, 640, 480, SDL_WINDOW_SHOWN, SDL_INIT_VIDEO | SDL_INIT_AUDIO, -1, SDL_RENDERER_ACCELERATED);
 	app.SetIcon(ICON);
+	app.SetMaxFrameRate(90);
 
 	gameState = new GameState;
-	gameState->movementSpeed 	= 5.0f;
+	gameState->movementSpeed 	= 6.0f;
 	gameState->ballSpeed 	 	= 2.0f;
 	gameState->ballXDirection 	= 1;
 	gameState->ballYDirection 	= 1;

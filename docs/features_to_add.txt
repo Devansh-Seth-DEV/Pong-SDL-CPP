@@ -1,0 +1,5 @@
+GAME FEATURES:
+	-> effect on opponent screen if point not scored
+	-> decrement the height of opponent rect if loose score
+	-> update the speed of the ball as the game passed by
+	
