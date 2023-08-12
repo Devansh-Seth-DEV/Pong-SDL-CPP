@@ -5,14 +5,14 @@ ResourceManager* TexturedRect::s_resourceManager = ResourceManager::GetInstance(
 TexturedRect::TexturedRect()
 	: m_updateCallback(nullptr)
 {
-	m_rectangle.x = {0, 0, 0, 0};
+	m_rectangle.x = m_rectangle.y = m_rectangle.w = m_rectangle.h = 0;
 }
 
 TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath)
 	: m_updateCallback(nullptr)
 {
 	resource = sourcePath;
-	m_rectangle = {0, 0, 0, 0};
+	m_rectangle.x = m_rectangle.y = m_rectangle.w = m_rectangle.h = 0;
 	SDL_Surface* surface = s_resourceManager->GetImgSurface(sourcePath);
 	m_texture = SDL_CreateTextureFromSurface(renderer, surface);
 	std::cout << "Created texture: " << sourcePath << std::endl;
@@ -22,7 +22,7 @@ TexturedRect::TexturedRect(SDL_Renderer* renderer, const char* sourcePath, SDL_C
 	: m_updateCallback(nullptr)
 {
 	m_colorKey = key;
-	m_rectangle = {0, 0, 0, 0};
+	m_rectangle.x = m_rectangle.y = m_rectangle.w = m_rectangle.h = 0;
 	SDL_Surface* surface = s_resourceManager->GetImgSurface(sourcePath);
 	SDL_SetColorKey(surface, SDL_TRUE, SDL_MapRGB(surface->format, key.r, key.g, key.b));
 	m_texture = SDL_CreateTextureFromSurface(renderer, surface);

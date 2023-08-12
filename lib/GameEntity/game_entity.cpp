@@ -314,42 +314,42 @@ int Entity::GetHeight(const int index) const {
 }
 
 int Entity::GetTopPosX(const int index) const {
-	return m_collider[index]->GetTopPosX();
+	return m_colliders[index]->GetTopPosX();
 }
 
 int Entity::GetTopPosY(const int index) const {
-	return m_collider[index]->GetTopPosY();
+	return m_colliders[index]->GetTopPosY();
 }
 
 int Entity::GetBottomPosX(const int index) const {
-	return m_collider[index]->GetBottomPosX();
+	return m_colliders[index]->GetBottomPosX();
 }
 
 int Entity::GetBottomPosY(const int index) const {
-	return m_collider[index]->GetBottomPosY();
+	return m_colliders[index]->GetBottomPosY();
 }
 
 int Entity::GetLeftPosX(const int index) const {
-	return m_collider[index]->GetLeftPosX();
+	return m_colliders[index]->GetLeftPosX();
 }
 
 int Entity::GetLeftPosY(const int index) const {
-   return m_collider[index]->GetLeftPosY();
+   return m_colliders[index]->GetLeftPosY();
 }
 
 int Entity::GetRightPosX(const int index) const {
-	return m_collider[index]->GetRightPosX();
+	return m_colliders[index]->GetRightPosX();
 }
 
 int Entity::GetRightPosY(const int index) const {
-	return m_collider[index]->GetRightPosY();
+	return m_colliders[index]->GetRightPosY();
 }
 
 int Entity::GetCenterPosX(const int index) const {
-	return m_collider[index]->GetCenterPosX();
+	return m_colliders[index]->GetCenterPosX();
 }
 
 int Entity::GetCenterPosY(const int index) const {
-	return m_collider[index]->GetCenterPosY();
+	return m_colliders[index]->GetCenterPosY();
 }
 
