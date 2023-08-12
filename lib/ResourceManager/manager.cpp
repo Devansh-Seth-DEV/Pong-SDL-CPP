@@ -7,7 +7,7 @@ ResourceManager::~ResourceManager() {
 void ResourceManager::FreeResources() {
 	std::unordered_map<std::string, TTF_Font*>::iterator it_font = m_fonts.begin();
 	while(it_font != m_fonts.end()){
-		FreeFontResources(it_font_>first);
+		FreeFontResources(it_font->first);
 		it_font++;
 	}
 
