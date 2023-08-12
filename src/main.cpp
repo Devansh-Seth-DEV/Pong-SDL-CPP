@@ -34,12 +34,13 @@ SDL_Color fontFg = {255, 255, 255, SDL_ALPHA_OPAQUE};
 struct GameState {
 	float movementSpeed;
 	float ballSpeed;
-	float ballXVelocity;
-	float ballYVelocity;
+	int ballXDirection;
+	int ballYDirection;
 	int leftScore;
 	int rightScore;
 	bool updateRightScore;
 	bool updateLeftScore;
+	bool bounceBall;
 };
 
 struct PaddleState {
@@ -133,11 +134,13 @@ void HandleScoreUpdates() {
 		gameState->leftScore++;
 		leftScoreLabel->SetLabel(GetLeftScore().c_str());
 		gameState->updateLeftScore = false;
+		gameState->bounceBall = false;
 	}
 	if(gameState->updateRightScore) {
 		gameState->rightScore++;
 		rightScoreLabel->SetLabel(GetRightScore().c_str());
 		gameState->updateRightScore = false;
+		gameState->bounceBall = false;
 	}
 }
 
@@ -145,14 +148,14 @@ void HandlePaddleUpdates() {
 	int leftPaddleY = leftPaddle->GetPosY();
 	int rightPaddleY = rightPaddle->GetPosY();
 	if(leftPaddleState.goUp) {
-		if(leftPaddleY-gameState->movementSpeed <= 0) {
+		if(leftPaddle->GetTopPosY()-gameState->movementSpeed <= 0) {
 			leftPaddleY = 0;
 		} else {
 			leftPaddleY -= gameState->movementSpeed;
 		}
 		leftPaddleState.goUp = false;
 	} else if(leftPaddleState.goDown) {
-		if(leftPaddleY+leftPaddle->GetHeight()+gameState->movementSpeed >= app.GetHeight()) {
+		if(leftPaddle->GetBottomPosY()+gameState->movementSpeed >= app.GetHeight()) {
 			leftPaddleY = app.GetHeight()-leftPaddle->GetHeight();
 		} else {
 			leftPaddleY += gameState->movementSpeed;
@@ -163,14 +166,14 @@ void HandlePaddleUpdates() {
 	}
 
 	if(rightPaddleState.goUp) {
-		if(rightPaddleY-gameState->movementSpeed <= 0) {
+		if(rightPaddle->GetTopPosY()-gameState->movementSpeed <= 0) {
 			rightPaddleY = 0;
 		} else {
 			rightPaddleY -= gameState->movementSpeed;
 		}
 		rightPaddleState.goUp = false;
 	} else if(rightPaddleState.goDown) {
-		if(rightPaddleY+rightPaddle->GetHeight()+gameState->movementSpeed >= app.GetHeight()) {
+		if(rightPaddle->GetBottomPosY()+gameState->movementSpeed >= app.GetHeight()) {
 			rightPaddleY = app.GetHeight()-rightPaddle->GetHeight();
 		} else {
 			rightPaddleY += gameState->movementSpeed;
@@ -186,9 +189,61 @@ void HandlePaddleUpdates() {
 	rightPaddle->SetPosY(0, rightPaddleY);
 }
 
+void HandleBallUpdates() {
+	if(gameState->bounceBall) {
+		if(leftPaddle->IsColliding(*ball)) {
+			gameState->ballXDirection *= -1;	
+		} else if(rightPaddle->IsColliding(*ball)) {
+			gameState->ballXDirection *= -1;
+		}
+
+		int ballPosX = ball->GetPosX();
+		int ballPosY = ball->GetPosY();
+
+		if(ball->GetRightPosX() >= app.GetWidth()) {
+			gameState->ballXDirection *= -1;
+			gameState->updateLeftScore = true;
+		} else if(ball->GetLeftPosX() <= 0) {
+			gameState->ballXDirection *= -1;
+			gameState->updateRightScore = true;
+		}
+
+		if(ball->GetBottomPosY() >= app.GetHeight()) {
+			gameState->ballYDirection *= -1;
+		} else if(ball->GetTopPosY() <= 0) {
+			gameState->ballYDirection *= -1;
+		}
+
+		if(gameState->ballXDirection > 0) {
+			ballPosX += gameState->ballSpeed;
+		} else {
+			ballPosX -= gameState->ballSpeed;
+		}
+
+		if(gameState->ballYDirection > 0) {
+			ballPosY += gameState->ballSpeed;
+		} else {
+			ballPosY -= gameState->ballSpeed;
+		}
+
+
+		ball->SetPosition(ballPosX, ballPosY);
+		ball->SetPosition(0, ball->GetPosX(), ball->GetPosY());
+	} else {
+		if(gameState->updateRightScore) {
+			gameState->ballXDirection = -1;
+		} else {
+			gameState->ballXDirection = 1;
+		}
+		gameState->ballYDirection *= -1;
+		ball->SetCenter(app.GetWidth()/2, app.GetHeight()/2);
+		ball->SetPosition(0, ball->GetPosX(), ball->GetPosY());
+	}
+}
+
 void HandleEvents() {
 	SDL_Event event;
-	while(SDL_PollEvent(&event)) {
+	while(SDL_PollEvent(&event)) { 
 		if(event.type == SDL_QUIT) {
 			app.StopAppLoop();
 		}
@@ -211,6 +266,9 @@ void HandleEvents() {
 				rightPaddleState = {false, true};
 			}
 
+			if(event.key.keysym.sym == SDLK_RETURN) {
+				gameState->bounceBall = true;
+			}
 		}	
 	}
 }
@@ -218,6 +276,7 @@ void HandleEvents() {
 void HandleUpdates() {
 	leftPaddle->Update();
 	rightPaddle->Update();
+	ball->Update();
 	leftScoreLabel->Update();
 	rightScoreLabel->Update();
 }
@@ -239,14 +298,15 @@ int main() {
 	app.SetIcon(ICON);
 
 	gameState = new GameState;
-	gameState->movementSpeed 	= 8.0f;
-	gameState->ballSpeed 	 	= 1.0f;
-	gameState->ballXVelocity 	= 1.0f;
-	gameState->ballYVelocity 	= 1.0f;
+	gameState->movementSpeed 	= 5.0f;
+	gameState->ballSpeed 	 	= 2.0f;
+	gameState->ballXDirection 	= 1;
+	gameState->ballYDirection 	= 1;
 	gameState->leftScore 	 	= 0;
 	gameState->rightScore 	 	= 0;
 	gameState->updateLeftScore  = false;
 	gameState->updateRightScore = false;
+	gameState->bounceBall		= false;
 
 	leftPaddleState = {false, false};
 	rightPaddleState = leftPaddleState;
@@ -257,6 +317,7 @@ int main() {
 	
 	leftPaddle->SetUpdateCallback(HandlePaddleUpdates);
 	rightPaddle->SetUpdateCallback(HandlePaddleUpdates);
+	ball->SetUpdateCallback(HandleBallUpdates);
 	leftScoreLabel->SetUpdateCallback(HandleScoreUpdates);
 	rightScoreLabel->SetUpdateCallback(HandleScoreUpdates);
 	app.SetEventCallback(HandleEvents);
