@@ -56,7 +56,7 @@ public:
 private:
 	SDL_Rect m_colliderRect;
 	void (*m_updateCallback)(void);
-	SDL_Color m_color;s
+	SDL_Color m_color;
 };
 
 #endif /* collider2d.h */
