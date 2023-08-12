@@ -185,6 +185,26 @@ void Entity::SetHeight(const int index, const int h) {
 	m_colliders[index]->SetHeight(h);
 }
 
+void Entity::SetTop(const int index, const int x, const int y) {
+	m_colliders[index]->SetTop(x, y);
+}
+
+void Entity::SetBottom(const int index, const int x, const int y) {
+	m_colliders[index]->SetBottom(x, y);
+}
+
+void Entity::SetLeft(const int index, const int x, const int y) {
+	m_colliders[index]->SetLeft(x, y);
+}
+
+void Entity::SetRight(const int index, const int x, const int y) {
+	m_colliders[index]->SetRight(x, y);
+}
+
+void Entity::SetCenter(const int index, const int x, const int y) {
+	m_colliders[index]->SetCenter(x, y);
+}
+
 void Entity::SetColliderColorKey(SDL_Color key) {
 	for(int i=0; i<m_colliders.size(); i++) {
 		m_colliders[i]->SetColorKey(key);
@@ -292,3 +312,44 @@ int Entity::GetWidth(const int index) const {
 int Entity::GetHeight(const int index) const {
 	return m_colliders[index]->GetHeight();
 }
+
+int Entity::GetTopPosX(const int index) const {
+	return m_collider[index]->GetTopPosX();
+}
+
+int Entity::GetTopPosY(const int index) const {
+	return m_collider[index]->GetTopPosY();
+}
+
+int Entity::GetBottomPosX(const int index) const {
+	return m_collider[index]->GetBottomPosX();
+}
+
+int Entity::GetBottomPosY(const int index) const {
+	return m_collider[index]->GetBottomPosY();
+}
+
+int Entity::GetLeftPosX(const int index) const {
+	return m_collider[index]->GetLeftPosX();
+}
+
+int Entity::GetLeftPosY(const int index) const {
+   return m_collider[index]->GetLeftPosY();
+}
+
+int Entity::GetRightPosX(const int index) const {
+	return m_collider[index]->GetRightPosX();
+}
+
+int Entity::GetRightPosY(const int index) const {
+	return m_collider[index]->GetRightPosY();
+}
+
+int Entity::GetCenterPosX(const int index) const {
+	return m_collider[index]->GetCenterPosX();
+}
+
+int Entity::GetCenterPosY(const int index) const {
+	return m_collider[index]->GetCenterPosY();
+}
+

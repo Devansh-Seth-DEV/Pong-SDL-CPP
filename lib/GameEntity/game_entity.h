@@ -63,6 +63,11 @@ public:
 	void SetWidth(const int index, const int w);
 	void SetHeight(const int index, const int h);
 
+	void SetTop(const int index, const int x, const int y);
+	void SetBottom(const int index, const int x, const int y);
+	void SetLeft(const int index, const int x, const int y);
+	void SetRight(const int index, const int x, const int y);
+	void SetCenter(const int index, const int x, const int y);
 
 	void SetColliderColorKey(SDL_Color key);
 	void SetColliderColorKey(const int index, SDL_Color key);
@@ -103,6 +108,21 @@ public:
 	int GetPosY(const int index) const;
 	int GetWidth(const int index) const;
 	int GetHeight(const int index) const;
+
+	int GetTopPosX(const int index) const;
+	int GetTopPosY(const int index) const;
+
+	int GetBottomPosX(const int index) const;
+	int GetBottomPosY(const int index) const;
+
+	int GetLeftPosX(const int index) const;
+	int GetLeftPosY(const int index) const;
+
+	int GetRightPosX(const int index) const;
+	int GetRightPosY(const int index) const;
+
+	int GetCenterPosX(const int index) const;
+	int GetCenterPosY(const int index) const;
 
 private:
 	SDL_Renderer* m_renderer;

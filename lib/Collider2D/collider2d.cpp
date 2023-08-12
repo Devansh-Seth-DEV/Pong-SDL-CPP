@@ -47,6 +47,31 @@ void Collider::SetHeight(const int h) {
 	m_colliderRect.h = h;
 }
 
+void Collider::SetTop(const int x, const int y) {
+	m_colliderRect.x = x-m_colliderRect.w/2;
+	m_colliderRect.y = y;
+}
+
+void Collider::SetBottom(const int x, const int y) {
+	m_colliderRect.x = x-m_colliderRect.w/2;	
+	m_colliderRect.y = y-m_colliderRect.h;
+}
+
+void Collider::SetLeft(const int x, const int y) {
+	m_colliderRect.x = x;
+	m_colliderRect.y = y-m_colliderRect.h/2;
+}
+
+void Collider::SetRight(const int x, const int y) {
+	m_colliderRect.x = x-m_colliderRect.w;
+	m_colliderRect.y = y-m_colliderRect.h/2;
+}
+
+void Collider::SetCenter(const int x, const int y) {
+	m_colliderRect.x = x-m_colliderRect.w/2;
+	m_colliderRect.y = y-m_colliderRect.h/2;
+}
+
 void Collider::SetColorKey(SDL_Color key) {
 	m_color = key;
 }
@@ -73,6 +98,46 @@ int Collider::GetWidth() const {
 
 int Collider::GetHeight() const {
 	return m_colliderRect.h;
+}
+
+int Collider::GetTopPosX() const {
+	return m_colliderRect.x + m_colliderRect.w/2;
+}
+
+int Collider::GetTopPosY() const {
+	return m_colliderRect.y;
+}
+
+int Collider::GetBottomPosX() const {
+	return m_colliderRect.x + m_colliderRect.w/2;
+}
+
+int Collider::GetBottomPosY() const {
+	return m_colliderRect.y + m_colliderRect.h;
+}
+
+int Collider::GetLeftPosX() const {
+	return m_colliderRect.x;
+}
+
+int Collider::GetLeftPosY() const {
+	return m_colliderRect.y + m_colliderRect.h/2;
+}
+
+int Collider::GetRightPosX() const {
+	return m_colliderRect.x + m_colliderRect.w;
+}
+
+int Collider::GetRightPosY() const {
+	return m_colliderRect.y + m_colliderRect.h/2;
+}
+
+int Collider::GetCenterPosX() const {
+	return m_colliderRect.x + m_colliderRect.w/2;
+}
+
+int Collider::GetCenterPosY() const {
+	return m_colliderRect.y + m_colliderRect.h/2;
 }
 
 SDL_bool Collider::IsColliding(const Collider& obj) const {
