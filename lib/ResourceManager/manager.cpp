@@ -5,18 +5,17 @@ ResourceManager::~ResourceManager() {
 }
 
 void ResourceManager::FreeResources() {
-	std::unordered_map<std::string, TTF_Font*>::iterator it_font;
+	std::unordered_map<std::string, TTF_Font*>::iterator it_font = m_fonts.begin();
 	while(it_font != m_fonts.end()){
-		TTF_Font* font = it_font->second;
-		TTF_CloseFont(font);
+		FreeFontResources(it_font_>first);
+		it_font++;
 	}
 
-	std::unordered_map<std::string, SDL_Surface*>::iterator it_surf;
+	std::unordered_map<std::string, SDL_Surface*>::iterator it_surf = m_surfaces.begin();
 	while(it_surf != m_surfaces.end()) {
-		SDL_Surface* surface = it_surf->second;
-		SDL_FreeSurface(surface);
+		FreeImgResources(it_surf->first);
+		it_surf++;
 	}
-	std::cout << "all resources have been freed from memory" << std::endl;
 }
 
 void ResourceManager::FreeImgResources(std::string resource) {
@@ -24,9 +23,9 @@ void ResourceManager::FreeImgResources(std::string resource) {
 	if(search != m_surfaces.end()) {
 		SDL_FreeSurface(search->second);
 		m_surfaces.erase(resource);
-		std::cout << "Resource: " << resource << " [free]" << std::endl;
+		std::cout << "Resource Free: " << resource << std::endl;
 	} else {
-		std::cout << "Resource: " << resource << " [already free]" << std::endl;
+		std::cout << "Resource Free[already free]: " << resource << std::endl;
 	}
 }
 
@@ -35,9 +34,9 @@ void ResourceManager::FreeFontResources(std::string resource) {
 	if(search != m_fonts.end()) {
 		TTF_CloseFont(search->second);
 		m_fonts.erase(resource);
-		std::cout << "Resource: " << resource << " [free]" << std::endl;
+		std::cout << "Resource Free: " << resource << std::endl;
 	} else {
-		std::cout << "Resource: " << resource << " [already free]" << std::endl;
+		std::cout << "Resource Free[already free]: " << resource << std::endl;
 	}
 }
 
