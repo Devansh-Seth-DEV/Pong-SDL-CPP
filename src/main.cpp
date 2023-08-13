@@ -41,7 +41,6 @@ struct GameState {
 	bool updateRightScore;
 	bool updateLeftScore;
 	bool bounceBall;
-	bool movePaddle;
 };
 
 struct PaddleState {
@@ -198,7 +197,6 @@ void HandleBallUpdates() {
 		int ballPosY = ball->GetPosY();
 
 		if(leftPaddle->IsColliding(*ball)) {
-			gameState->movePaddle = false;
 			collisionSound->PlaySound();
 			gameState->ballXDirection *= -1;
 			const int midY = leftPaddle->GetCenterPosY();
@@ -209,7 +207,6 @@ void HandleBallUpdates() {
 			}
 		} else if(rightPaddle->IsColliding(*ball)) {
 			collisionSound->PlaySound();
-			gameState->movePaddle = false;
 			gameState->ballXDirection *= -1;
 			const int midY = rightPaddle->GetCenterPosY();
 			if(midY <= ballPosY) {
@@ -218,7 +215,6 @@ void HandleBallUpdates() {
 				gameState->ballYDirection = 1;
 			}
 		} else {
-			gameState->movePaddle = true;
 		}
 
 		if(ball->GetRightPosX() >= app.GetWidth()) {
@@ -281,7 +277,7 @@ void HandleEvents() {
 			app.StopAppLoop();
 		}
 
-		if(event.type == SDL_KEYDOWN && gameState->movePaddle) {
+		if(event.type == SDL_KEYDOWN) {
 			int y = leftPaddle->GetPosY();
 			if(event.key.keysym.sym == SDLK_w) {
 				// change left paddle position in upward direction
@@ -341,7 +337,6 @@ int main() {
 	gameState->updateLeftScore  = false;
 	gameState->updateRightScore = false;
 	gameState->bounceBall		= false;
-	gameState->movePaddle		= true;
 
 	leftPaddleState = {false, false};
 	rightPaddleState = leftPaddleState;
