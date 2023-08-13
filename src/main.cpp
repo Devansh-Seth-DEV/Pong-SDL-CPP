@@ -41,6 +41,7 @@ struct GameState {
 	bool updateRightScore;
 	bool updateLeftScore;
 	bool bounceBall;
+	bool movePaddle;
 };
 
 struct PaddleState {
@@ -131,12 +132,14 @@ void InitScores() {
 
 void HandleScoreUpdates() {
 	if(gameState->updateLeftScore) {
+		scoreSound->PlaySound();
 		gameState->leftScore++;
 		leftScoreLabel->SetLabel(GetLeftScore().c_str());
 		gameState->updateLeftScore = false;
 		gameState->bounceBall = false;
 	}
 	if(gameState->updateRightScore) {
+		scoreSound->PlaySound();
 		gameState->rightScore++;
 		rightScoreLabel->SetLabel(GetRightScore().c_str());
 		gameState->updateRightScore = false;
@@ -191,14 +194,32 @@ void HandlePaddleUpdates() {
 
 void HandleBallUpdates() {
 	if(gameState->bounceBall) {
-		if(leftPaddle->IsColliding(*ball)) {
-			gameState->ballXDirection *= -1;	
-		} else if(rightPaddle->IsColliding(*ball)) {
-			gameState->ballXDirection *= -1;
-		}
-
 		int ballPosX = ball->GetPosX();
 		int ballPosY = ball->GetPosY();
+
+		if(leftPaddle->IsColliding(*ball)) {
+			gameState->movePaddle = false;
+			collisionSound->PlaySound();
+			gameState->ballXDirection *= -1;
+			const int midY = leftPaddle->GetCenterPosY();
+			if(midY <= ballPosY) {
+				gameState->ballYDirection = 1;
+			} else if(midY >= ballPosY) {
+				gameState->ballYDirection = -1;
+			}
+		} else if(rightPaddle->IsColliding(*ball)) {
+			collisionSound->PlaySound();
+			gameState->movePaddle = false;
+			gameState->ballXDirection *= -1;
+			const int midY = rightPaddle->GetCenterPosY();
+			if(midY <= ballPosY) {
+				gameState->ballYDirection = -1;
+			} else if(midY >= ballPosY) {
+				gameState->ballYDirection = 1;
+			}
+		} else {
+			gameState->movePaddle = true;
+		}
 
 		if(ball->GetRightPosX() >= app.GetWidth()) {
 			gameState->ballXDirection *= -1;
@@ -230,6 +251,7 @@ void HandleBallUpdates() {
 		ball->SetPosition(ballPosX, ballPosY);
 		ball->SetPosition(0, ball->GetPosX(), ball->GetPosY());
 	} else {
+		collisionSound->StopSound();
 		if(gameState->updateRightScore) {
 			gameState->ballXDirection = -1;
 		} else {
@@ -238,6 +260,17 @@ void HandleBallUpdates() {
 		gameState->ballYDirection *= -1;
 		ball->SetCenter(app.GetWidth()/2, app.GetHeight()/2);
 		ball->SetPosition(0, ball->GetPosX(), ball->GetPosY());
+	}
+
+	static Uint32 currentTime = SDL_GetTicks();
+	static Uint32 lastTime 	  = SDL_GetTicks();
+
+	currentTime = SDL_GetTicks();
+	lastTime = SDL_GetTicks();
+	if(currentTime > lastTime+1000) {
+		scoreSound->StopSound();
+		collisionSound->StopSound();
+		lastTime = currentTime;
 	}
 }
 
@@ -248,7 +281,7 @@ void HandleEvents() {
 			app.StopAppLoop();
 		}
 
-		if(event.type == SDL_KEYDOWN) {
+		if(event.type == SDL_KEYDOWN && gameState->movePaddle) {
 			int y = leftPaddle->GetPosY();
 			if(event.key.keysym.sym == SDLK_w) {
 				// change left paddle position in upward direction
@@ -287,19 +320,19 @@ void HandleRenders() {
 	leftScoreLabel->Render();
 	rightScoreLabel->Render();
 
-	leftPaddle->Render();
-	rightPaddle->Render();
-	ball->Render();
+	leftPaddle->RenderSprite();
+	rightPaddle->RenderSprite();
+	ball->RenderSprite();
 }
 
 int main() {
 	const char* title = "PONG";
 	app.App(title, 20, 20, 640, 480, SDL_WINDOW_SHOWN, SDL_INIT_VIDEO | SDL_INIT_AUDIO, -1, SDL_RENDERER_ACCELERATED);
 	app.SetIcon(ICON);
-	app.SetMaxFrameRate(90);
+	app.SetMaxFrameRate(60);
 
 	gameState = new GameState;
-	gameState->movementSpeed 	= 6.0f;
+	gameState->movementSpeed 	= 8.0f;
 	gameState->ballSpeed 	 	= 2.0f;
 	gameState->ballXDirection 	= 1;
 	gameState->ballYDirection 	= 1;
@@ -308,6 +341,7 @@ int main() {
 	gameState->updateLeftScore  = false;
 	gameState->updateRightScore = false;
 	gameState->bounceBall		= false;
+	gameState->movePaddle		= true;
 
 	leftPaddleState = {false, false};
 	rightPaddleState = leftPaddleState;

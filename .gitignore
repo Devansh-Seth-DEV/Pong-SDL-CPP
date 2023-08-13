@@ -1,2 +1,8 @@
 # BINARY FOLDER
 bin/
+
+# FEATURES FILE
+docs/features_to_add.txt
+
+# SWP FILES
+*.swp
